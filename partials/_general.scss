@@ -1,0 +1,45 @@
+// General styles for the site
+
+html {
+    font-size: 125%;
+}
+
+.wrapper {
+    max-width: 1600px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.wrapperSmall {
+  width: 90%;
+  max-width: 1152px;
+  margin: 0 auto; 
+}
+
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+img {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+}
+
+.skipLink {
+  position: absolute;
+  left: -1000px;
+  top: 5px;
+  z-index: 999;
+  background: white;
+  color: black;
+}
+
+.skipLink:focus {
+  left: 0;
+}  
