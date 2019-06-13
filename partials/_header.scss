@@ -1,0 +1,113 @@
+header {
+  height: 100vh;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+header .container {
+  padding: 5% 0;
+}
+
+.title {
+  position: relative;
+  width: 50%;
+}
+.joke h3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 5px 0;
+  opacity: 0;
+  background: $accent;
+  transition: opacity 0.5s;
+}
+
+.joke:hover h3 {
+  opacity: 1;
+}
+
+.subTitle {
+  display: flex;
+  justify-content: left;
+  margin-top: 5%;
+  li {
+    padding-right: 10px;
+  }
+}
+
+.active {
+  border-left: 3px solid $accentDark;
+  border-bottom: 3px solid $accentDark;
+}
+
+.active a {
+    padding: 0 0 5px 5px;
+}
+
+
+
+.menuContainer {
+  position: absolute;
+  top: 15%;
+  left: 90%;
+  height: 50px;
+  background: $background;
+}
+
+.sticky{
+  position: fixed;
+  top: 0%;
+  left: 95%;
+  height: 50px;
+  z-index: 1;
+}
+
+.menu {
+  margin: 0;
+  position: relative;
+}
+
+.menuLines {
+  position: absolute;
+  top: 0;
+  left: -150%;
+  transition: left 0.5s;
+  background: $background;
+  display: flex;
+}
+
+.menuLines ul {
+  margin-right: 10px;
+}
+
+.toggle {
+  display: none;
+}
+
+.header {
+  display: flex;
+  height: 60vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+header h3 {
+  margin-bottom: 10px;
+}
+
+header {
+  background-image: linear-gradient(-55deg, $background 50%, $accent 50%);
+}
+
+
+

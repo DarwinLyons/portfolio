@@ -1,0 +1,64 @@
+.skills,
+.skillsContainer {
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.skillsContainer h2 {
+  padding: 20px 0;
+}
+
+.skillsContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border-bottom: 3px solid $accentDark;
+}
+
+.skillUL {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.skillUL li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 25px 15px;
+  transition: color 0.5s, transform 0.5s;
+}
+
+.skillUL li:hover h4,
+.skillUL li:hover{
+  color: $accentDark;
+}
+
+.skillUL i {
+  font-size: 2rem;
+}
+
+.skillUL h4 {
+  margin-top: 15px;
+  transition: color 0.5s, transform 0.5s;
+}
+
+.firebase {
+  margin: 0;
+  h4 {
+    margin-top: 10px;
+  }
+}
+
+.firebase svg {
+  fill: $text;
+  font-size: 2rem;
+  transition: 0.5s fill;
+}
+
+.firebase:hover svg {
+  fill: $accentDark;
+}
+
+ 

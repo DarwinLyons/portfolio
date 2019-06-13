@@ -1,0 +1,136 @@
+.connect {
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.connectContainer {
+  margin-bottom: 5%;
+}
+
+.connectContainer h2 {
+  padding: 20px 0;
+}
+
+.connectText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.connecText p {
+  opacity: 0.7;
+}
+
+.connectText p:nth-of-type(1) {
+  margin: 1% 0;
+}
+
+.connectContainer {
+  width: 100%;
+  border-bottom: 3px solid $accentDark;
+  display: flex;
+  justify-content: center;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  color: $text;
+  margin-top: 3%;
+}
+
+.nameEmail,
+.messageConnect {
+  display: flex;
+  flex-direction: column;
+}
+
+.nameEmail {
+  margin-right: 5%;
+  justify-content: center;
+}
+
+.messageConnect {
+  margin-left: 5%;
+}
+
+input, 
+textarea {
+  background-color: $background;
+  border-top: 3px solid $accentDark;
+  border-left: 3px solid $accentDark;
+  border-right: 3px solid $accent;
+  border-bottom: 3px solid $accent;
+  transition: background 0.5s;
+}
+
+.name,
+textarea {
+  margin-bottom: 7%;
+}
+
+.nameEmail input[type="text"],
+.nameEmail input[type="email"],
+.messageConnect textarea:focus {
+  color: $text;
+  transition: background-color 0.3s,
+}
+
+.nameEmail input[type="text"]:focus,
+.nameEmail input[type="email"]:focus,
+.messageConnect textarea:focus {
+  background-color: $accent;
+}
+
+.nameEmail input[type="text"]:active,
+.nameEmail input[type="email"]:active,
+.messageConnect textarea:active {
+  box-shadow: 0 0 5px $accentDark;
+}
+
+.messageConnect input[type="submit"] {
+  padding: 10px;
+  border-radius: 10px;
+  width: 120px;
+  transition: background-color 0.3s, transform 0.3s;
+  margin: 0 auto;
+}
+
+
+
+
+.connectLinks {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 5%;
+}
+
+.socialLinks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.connectLinks h2 {
+  padding: 10px 0 20px;
+}
+
+.social h4 {
+  margin-top: 10px;
+  transition: color 0.3s, transform 0.3s;
+}
+.social,
+.social a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 10px;
+  transition: color 0.3s, transform 0.3s;
+  &:hover,
+  &:hover h4 {
+    color: $accentDark;
+    transform: scale(1.1);
+  }
+}

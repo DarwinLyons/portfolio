@@ -4,6 +4,10 @@ html {
     font-size: 125%;
 }
 
+body {
+  background: $background;
+}
+
 .wrapper {
     max-width: 1600px;
     margin: 0 auto;
@@ -17,17 +21,28 @@ html {
 }
 
 li {
-	list-style: none;
+  list-style: none;
+  transition: transform 0.5s;
+}
+li:hover {
+  transform: scale(1.1);
 }
 
 a {
 	text-decoration: none;
-	color: inherit;
+  color: inherit;
+  transition: color 0.5s;
+}
+
+
+a:hover {
+  color: $accentDark;
+  transform: scale(2);
 }
 
 img {
   max-width: 100%;
-  width: 100%;
+  // width: 100%;
   display: block;
 }
 
@@ -42,4 +57,49 @@ img {
 
 .skipLink:focus {
   left: 0;
-}  
+} 
+
+// Font styles
+h1,
+h2,
+h3,
+h4 {
+  font-family: $headertext;
+  color: $text;
+  margin: 0;
+  padding: 0;
+}
+
+p,
+li,
+a,
+ul {
+  font-family: $pagetext;
+  color: $text;
+  padding: 0;
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+button {
+  border-radius: 10px;
+  border: 2px solid $accentDark;
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+button:hover,
+.messageConnect input[type="submit"]:hover {
+  background-color: $accent;
+}
+
+button:active,
+.messageConnect input[type="submit"]:active {
+  transform: scale(0.9);
+  box-shadow: 0 0 5px $accentDark;
+}
+
+button:focus,
+.messageConnect input[type="submit"]:focus {
+  transform: scale (1.5);
+  box-shadow: 0 0 5px $accentDark;
+}
