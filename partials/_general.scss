@@ -88,18 +88,18 @@ button {
 }
 
 button:hover,
-.messageConnect input[type="submit"]:hover {
+.form input[type="submit"]:hover {
   background-color: $accent;
 }
 
 button:active,
-.messageConnect input[type="submit"]:active {
+.form input[type="submit"]:active {
   transform: scale(0.9);
   box-shadow: 0 0 5px $accentDark;
 }
 
 button:focus,
-.messageConnect input[type="submit"]:focus {
+.form input[type="submit"]:focus {
   transform: scale (1.5);
   box-shadow: 0 0 5px $accentDark;
 }

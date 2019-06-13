@@ -34,8 +34,13 @@
 
 form {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
   color: $text;
   margin-top: 3%;
 }
@@ -72,24 +77,24 @@ textarea {
 
 .nameEmail input[type="text"],
 .nameEmail input[type="email"],
-.messageConnect textarea:focus {
+.form textarea:focus {
   color: $text;
   transition: background-color 0.3s,
 }
 
 .nameEmail input[type="text"]:focus,
 .nameEmail input[type="email"]:focus,
-.messageConnect textarea:focus {
+.form textarea:focus {
   background-color: $accent;
 }
 
 .nameEmail input[type="text"]:active,
 .nameEmail input[type="email"]:active,
-.messageConnect textarea:active {
+.form textarea:active {
   box-shadow: 0 0 5px $accentDark;
 }
 
-.messageConnect input[type="submit"] {
+.form input[type="submit"] {
   padding: 10px;
   border-radius: 10px;
   width: 120px;
