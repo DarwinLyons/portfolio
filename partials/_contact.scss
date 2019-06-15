@@ -17,8 +17,8 @@
   align-items: center;
 }
 
-.connecText p {
-  opacity: 0.7;
+.connectText a {
+  border-bottom: 3px solid $accentDark;
 }
 
 .connectText p:nth-of-type(1) {
@@ -102,9 +102,6 @@ textarea {
   margin: 0 auto;
 }
 
-
-
-
 .connectLinks {
   display: flex;
   align-items: center;
@@ -133,9 +130,14 @@ textarea {
   align-items: center;
   margin: 0 10px;
   transition: color 0.3s, transform 0.3s;
-  &:hover,
-  &:hover h4 {
-    color: $accentDark;
-    transform: scale(1.1);
-  }
+}
+
+.social:hover a,
+.social:hover a h4 {
+  color: $accentDark;
+  transform: scale(1.1);
+}
+
+.email {
+  margin: 20px 0;
 }

@@ -1,3 +1,7 @@
+.portfolio {
+  margin-top: 10%;
+}
+
 .portfolioText {
   display: flex;
   flex-direction: column;
@@ -6,16 +10,35 @@
 
 .portfolioText h2 {
   margin: 10px 0;
+  font-size: 3rem;
+  position: relative;
 }
+.portfolioText h2::after {
+  content: '';
+  position: absolute;
+  top: 60%;
+  left: 7%;
+  height: 20%;
+  width: 100%;
+  background: $accentDark;
+  z-index: -1;
+}
+
 
 .portfolioText h3,
 .portfolioText p {
   opacity: 0.7;
 }
 
+.projectText p:nth-of-type(1) {
+  font-family: $pagetext;
+}
+
 .projectContainer {
   display: flex;
-  height: 50vh;
+  height: 100vh;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .projectImg,
@@ -25,7 +48,13 @@
 
 .projectText {
   height: 100%;
+  width: 40%;
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.projectText h3,
+.projectText p {
+  margin-bottom: 5%;
 }

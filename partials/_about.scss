@@ -1,6 +1,8 @@
 .about {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh;
 }
 
 .aboutText {
@@ -17,5 +19,18 @@
   border-bottom: 3px solid $accentDark;
   text-align: center;
   margin-bottom: 10px;
+}
 
+.about .img {
+  margin-left: 10px;
+  box-shadow: 15px 15px $accentDark;
+}
+
+@media (max-width: 1030px) {
+  .about {
+    justify-content: space-between;
+  }
+  .aboutText {
+    padding-right: 0;
+  }
 }

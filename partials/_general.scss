@@ -74,7 +74,9 @@ p,
 li,
 a,
 ul {
-  font-family: $pagetext;
+  font-family: $headertext;
+  font-weight: 400;
+  line-height: 1.5;
   color: $text;
   padding: 0;
   margin: 0;
@@ -84,6 +86,7 @@ ul {
 button {
   border-radius: 10px;
   border: 2px solid $accentDark;
+  padding: 5px 10px;
   transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
 }
 
