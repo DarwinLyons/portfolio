@@ -1,3 +1,6 @@
+//variable for height of window minus nav
+let navHeight = $(window).height() - 50;
+
 //nav bar slide off on click
 $(".fa-times").click(function () {
   $(".toggle").toggle("slide right");
@@ -5,13 +8,19 @@ $(".fa-times").click(function () {
 
 //nav bar slide on on click
 $(".menuLink").click(function () {
-  $(".toggle").toggle("slide");
+  $(".toggle").toggle("slide"); 
+  if ($(window).scrollTop < navHeight) {
+    $(".click").addClass("mobileContainer");
+  } else {
+    $(".click").addClass("mobileContainer");
+  }
+
 });
 
 const navSlide = function() {
   //sticky nav
   $(window).bind('scroll', function () {
-    let navHeight = $(window).height() - 50;
+    
     //if window height is larger than the height minus the menu
     if ($(window).scrollTop() > navHeight) {
       $('.menuContainer').addClass('sticky');
@@ -20,9 +29,10 @@ const navSlide = function() {
       $(".menuToggle").removeClass("menuLines");
     } else {
       $('.menuContainer').removeClass('sticky');
+      $(".click").addClass("mobileContainer");
       $(".menuToggle").addClass("menuLines");
       $(".menuToggle").removeClass("lines");
-      $(".click").addClass("mobileContainer");
+      $(".click").removeClass("mobileContainer");
     }
   })
 }
