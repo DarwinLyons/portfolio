@@ -183,6 +183,33 @@ body {
   background: blue;
 }
 
+.actorContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.actor,
+.actor a {
+  font-size: 3rem;
+}
+
+.actor a {
+  border-bottom: 3px solid #1995AD;
+}
+
+.actor a:hover {
+  color: #1995AD;
+}
+
 html {
   font-size: 125%;
 }
