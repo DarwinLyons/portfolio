@@ -2,6 +2,10 @@
   margin-top: 10%;
 }
 
+.projectImgMobile {
+  display: none;
+}
+
 .portfolioText {
   display: flex;
   flex-direction: column;
@@ -57,4 +61,37 @@
 .projectText h3,
 .projectText p {
   margin-bottom: 5%;
+}
+
+@media (max-width: 675px) {
+  .projectContainer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+  }
+
+  .projectContainer .projectImgMobile {
+    order: 0;
+    width: 85%;
+  }
+  .projectContainer .projectImgMobile img {
+    border-radius: 20px;
+    border: 3px solid $text;
+    box-shadow: 5px 5px $text;
+
+  }
+  .projectImg {
+    display: none;
+  }
+
+  .projectImgMobile {
+    display: inline-block;
+  }
+
+  .projectContainer .projectText {
+    width: 70%;
+    order: 1;
+    margin: 40px;
+  }
 }

@@ -15,6 +15,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
 }
 
 .connectText a {
@@ -123,6 +124,8 @@ textarea {
   margin-top: 10px;
   transition: color 0.3s, transform 0.3s;
 }
+
+
 .social,
 .social a {
   display: flex;
@@ -140,4 +143,38 @@ textarea {
 
 .email {
   margin: 20px 0;
+}
+
+@media (max-width: 580px) {
+  .form {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nameEmail, 
+  .messageConnect {
+    text-align: center;
+    margin: 0;
+  }
+}
+
+@media (max-width: 430px) {
+  .social {
+    margin: 0;
+  }
+
+  .social a {
+    margin: 0 5px;
+  }
+
+  .social a h4:hover {
+    transform: scale(1);
+  }
+
+  .connect p,
+  .connect .social,
+  .social a i,
+  .social a h4 {
+    font-size: 1rem;
+  }
 }

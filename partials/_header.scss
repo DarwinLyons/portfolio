@@ -11,6 +11,10 @@ header .container {
   padding: 5% 0;
 }
 
+.mobile {
+  display: none;
+}
+
 .title {
   position: relative;
   width: 50%;
@@ -18,7 +22,7 @@ header .container {
 .joke h3 {
   position: absolute;
   top: 0;
-  left: 0;
+  left: 10%;
   margin: 0;
   padding: 5px 0;
   opacity: 0;
@@ -34,6 +38,7 @@ header .container {
   display: flex;
   justify-content: left;
   margin-top: 5%;
+  z-index: 1;
   li {
     margin-right: 30px;
   }
@@ -51,9 +56,10 @@ header .container {
 .menuContainer {
   position: absolute;
   top: 12%;
-  left: 90%;
+  left: 85%;
   height: 50px;
   background: $background;
+  z-index: 2;
 }
 
 .sticky{
@@ -69,6 +75,7 @@ header .container {
   position: relative;
 }
 
+.lines,
 .menuLines {
   position: absolute;
   top: 0;
@@ -76,9 +83,12 @@ header .container {
   transition: left 0.5s;
   background: $background;
   display: flex;
+  padding: 10px;
 }
 
-.menuLines ul {
+
+
+.lines ul {
   margin-right: 10px;
 }
 
@@ -95,6 +105,7 @@ header .container {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
 h1 {
@@ -127,6 +138,90 @@ header {
 span {
   display: block;
 }
+}
+
+@media (max-width: 760px) {
+  .title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .subTitle {
+    align-items: center;
+  }
+}
+
+@media (max-width: 650px) {
+  .menuContainer {
+    top: 7%;
+    left: 50%;
+    background: $accent;
+  }
+
+  .mobile {
+    display: block;
+  }
+
+  .mobileDisplay {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .mobileContainer {
+    display: flex;
+    flex-direction: row;
+    margin: 10px 0;
+    li {
+      margin-right: 20px;
+    }
+  }
+
+  .menuLines {
+    position: absolute;
+    top: 100%;
+    left: -400%;
+  }
+
+  .lines {
+    top: 0;
+    left: -150%; 
+  }
+
+  .start {
+    display: none;
+  }
+
+  .sticky {
+    top: 0%;
+    left: 85%;
+    background: $background;
+  }
+
+  .header h1 {
+    text-align: center;
+  }
+  .header h4 {
+    display: none;
+  }
+
+  .title {
+    display: none;
+  }
+}
+
+
+
+@media (max-width: 460px) {
+  .menuContainer {
+    top: 25%;
+  }
+
+  .sticky {
+    top: 0%;
+    left: 80%;
+  }
 }
 
 

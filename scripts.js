@@ -11,11 +11,18 @@ $(".menuLink").click(function () {
 const navSlide = function() {
   //sticky nav
   $(window).bind('scroll', function () {
-    let navHeight = $(window).height() - 500;
+    let navHeight = $(window).height() - 50;
+    //if window height is larger than the height minus the menu
     if ($(window).scrollTop() > navHeight) {
       $('.menuContainer').addClass('sticky');
+      $(".click").removeClass("mobileContainer");
+      $(".menuToggle").addClass("lines");
+      $(".menuToggle").removeClass("menuLines");
     } else {
       $('.menuContainer').removeClass('sticky');
+      $(".menuToggle").addClass("menuLines");
+      $(".menuToggle").removeClass("lines");
+      $(".click").addClass("mobileContainer");
     }
   })
 }

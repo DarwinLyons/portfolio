@@ -37,13 +37,20 @@
               <!-- menuLink -->
             </div>
             <div class="toggle">
-              <div class="menuLines">
-                <ul>
-                  <li><a href="#about">About</a></li>
-                  <li><a href="#portfolio">Portfolio</a></li>
-                  <li><a href="#skills">Skills</a></li>
-                  <li><a href="#contact">Contact</a></li>
-                  <li><a href="#start">Start a Project</a></li>
+              <div class="menuToggle">
+                <ul class="mobileDisplay">
+                  <div class="click">
+                    <li class="active mobile"><a href="#">Web Developer</a></li>
+                    <li class="mobile"><a href="#">Theatre and Film</a></li>
+                  </div>
+                  <div class="click">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#start" class="start">Start a Project</a></li>
+
+                  </div>
                 </ul>
                 <i class="fas fa-times"></i>
               </div>
@@ -92,6 +99,9 @@
             <div class="projectImg">
               <img src="assets/complimentCure.jpg">
             </div> 
+            <div class="projectImgMobile">
+              <img src="assets/complimemtMobile.png">
+            </div> 
             <div class="projectText">
               <h3>Compliment Cure</h3>
               <p>HTML5 // CSS3 // JavaScript // JQuery</p>
@@ -107,7 +117,7 @@
             <div class="projectText">
               <h3>What's Playing?</h3>
               <p>HTML5 // CSS3 // JavaScript // JQuery // API //Paired Programming</p>
-              <p>An app picks a movie recommendation based on a movie script you fill in. Made with <a href="#">Jonathan Tung</a></p>
+              <p>An app picks a movie recommendation based on a movie script you fill in. Made with <a href="https://jonathantung.dev/">Jonathan Tung</a></p>
               <div class="linkButtons">
                 <button>
                   <a href="https://jonnotung.github.io/whatsPlaying/">Live</a>
@@ -117,14 +127,17 @@
                 </button>
               </div>
             </div>
-                                                  <div class="projectImg">
-                                                    <img src="assets/whatsPlaying.jpg" alt="An image of the website What's playing">
-                                                  </div>
+                                                  <div class="projectImg">                   <img src="assets/whatsPlaying.jpg" alt="An image of the website What's playing">                          </div>
+                                                  <div    class="projectImgMobile"> 
+                                                    <img src="assets/whatsPlayingMobile.jpg">                           </div>
           <!-- projectContainer three -->
           </div>
           <div class="projectContainer four">
             <div class="projectImg">
               <img src="assets/mindNSoul.jpg" alt="">
+            </div>
+            <div class="projectImgMobile">
+              <img src="assets/MindNSoulMobile.jpg" alt="">
             </div>
             <div class="projectText">
               <h3>PSD Conversion</h3>
@@ -157,6 +170,9 @@
             </div>
             <div class="projectImg">
               <img src="assets/wish.jpg" alt="">
+            </div>
+            <div class="projectImgMobile">
+            <img src="assets/wishmobile.jpg">
             </div>
           <!-- projectContainer two -->
           </div>
@@ -197,6 +213,10 @@
             <i class="fas fa-network-wired" aria-hidden="true"></i>
             <h4>APIs</h4>
           </li>
+          <li>
+            <i class="fas fa-mobile-alt" aria-hidden="true"></i>
+            <h4>Responsive <span>Design</span></h4>
+          </li>
           <li class="firebase">
             <svg width="45px" height="45px" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <title />
@@ -206,20 +226,8 @@
             <h4>Firebase</h4>
           </li>
           <li>
-            <i class="fas fa-mobile-alt" aria-hidden="true"></i>
-            <h4>Responsive Design</h4>
-          </li>
-          <li>
-            <i class="fas fa-heart" aria-hidden="true"></i>
-            <h4>Web Accessibility</h4>
-          </li>
-          <li>
             <i class="fab fa-github" aria-hidden="true"></i>
             <h4>GitHub</h4>
-          </li>
-          <li>
-            <i class="fas fa-user-friends" aria-hidden="true"></i>
-            <h4>Paired Programming</h4>
           </li>
           <li>
             <i class="fas fa-binoculars" aria-hidden="true"></i>
@@ -228,6 +236,14 @@
           <li>
             <i class="devicon-visualstudio-plain" aria-hidden="true"></i>
             <h4>VS Code</h4>
+          </li>
+          <li>
+            <i class="fas fa-heart" aria-hidden="true"></i>
+            <h4>Web <span>Accessibility</span></h4>
+          </li>
+          <li>
+            <i class="fas fa-user-friends" aria-hidden="true"></i>
+            <h4>Paired <span>Programming</span></h4>
           </li>
           <li>
             <i class="fas fa-thumbs-up" aria-hidden="true"></i>
@@ -302,7 +318,7 @@
   </main>
   <footer>
     <div class="container wrapperBig">
-      <p>Website by Darwin Lyons &copy 2019 theme Pottereight</p>
+      <p>Website by Darwin Lyons &copy 2019 <span>theme Pottereight</span></p>
     <!-- container wrapperBig -->
     </div>
   </footer>

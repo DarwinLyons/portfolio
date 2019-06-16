@@ -3,3 +3,9 @@ footer {
   text-align: center;
   background: $accent;
 }
+
+@media (max-width: 550px) {
+  footer p {
+    font-size: 0.9rem;
+  }
+}

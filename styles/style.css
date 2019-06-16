@@ -205,10 +205,10 @@ body {
 
 li {
   list-style: none;
-  -webkit-transition: -webkit-transform 0.5s;
-  transition: -webkit-transform 0.5s;
-  transition: transform 0.5s;
-  transition: transform 0.5s, -webkit-transform 0.5s;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
 }
 
 li:hover {
@@ -219,10 +219,12 @@ li:hover {
 a {
   text-decoration: none;
   color: inherit;
-  -webkit-transition: color 0.5s;
-  transition: color 0.5s;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+  overflow: hidden;
 }
 
+li:hover a,
 a:hover {
   color: #1995AD;
   -webkit-transform: scale(2);
@@ -318,6 +320,10 @@ header .container {
   padding: 5% 0;
 }
 
+.mobile {
+  display: none;
+}
+
 .title {
   position: relative;
   width: 50%;
@@ -326,7 +332,7 @@ header .container {
 .joke h3 {
   position: absolute;
   top: 0;
-  left: 0;
+  left: 10%;
   margin: 0;
   padding: 5px 0;
   opacity: 0;
@@ -347,6 +353,7 @@ header .container {
       -ms-flex-pack: left;
           justify-content: left;
   margin-top: 5%;
+  z-index: 1;
 }
 
 .subTitle li {
@@ -365,9 +372,10 @@ header .container {
 .menuContainer {
   position: absolute;
   top: 12%;
-  left: 90%;
+  left: 85%;
   height: 50px;
   background: #F1F1F2;
+  z-index: 2;
 }
 
 .sticky {
@@ -383,6 +391,7 @@ header .container {
   position: relative;
 }
 
+.lines,
 .menuLines {
   position: absolute;
   top: 0;
@@ -393,9 +402,10 @@ header .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding: 10px;
 }
 
-.menuLines ul {
+.lines ul {
   margin-right: 10px;
 }
 
@@ -421,6 +431,7 @@ header .container {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  overflow: hidden;
 }
 
 h1 {
@@ -455,6 +466,96 @@ header {
   }
   span {
     display: block;
+  }
+}
+
+@media (max-width: 760px) {
+  .title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+  }
+  .subTitle {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media (max-width: 650px) {
+  .menuContainer {
+    top: 7%;
+    left: 50%;
+    background: #A1D6E2;
+  }
+  .mobile {
+    display: block;
+  }
+  .mobileDisplay {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .mobileContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin: 10px 0;
+  }
+  .mobileContainer li {
+    margin-right: 20px;
+  }
+  .menuLines {
+    position: absolute;
+    top: 100%;
+    left: -400%;
+  }
+  .lines {
+    top: 0;
+    left: -150%;
+  }
+  .start {
+    display: none;
+  }
+  .sticky {
+    top: 0%;
+    left: 85%;
+    background: #F1F1F2;
+  }
+  .header h1 {
+    text-align: center;
+  }
+  .header h4 {
+    display: none;
+  }
+  .title {
+    display: none;
+  }
+}
+
+@media (max-width: 460px) {
+  .menuContainer {
+    top: 25%;
+  }
+  .sticky {
+    top: 0%;
+    left: 80%;
   }
 }
 
@@ -512,8 +613,26 @@ header {
   }
 }
 
+@media (max-width: 630px) {
+  .about {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: auto;
+  }
+  .aboutText {
+    width: 100%;
+    margin-top: 40px;
+  }
+}
+
 .portfolio {
   margin-top: 10%;
+}
+
+.projectImgMobile {
+  display: none;
 }
 
 .portfolioText {
@@ -593,6 +712,47 @@ header {
   margin-bottom: 5%;
 }
 
+@media (max-width: 675px) {
+  .projectContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: auto;
+  }
+  .projectContainer .projectImgMobile {
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+    width: 85%;
+  }
+  .projectContainer .projectImgMobile img {
+    border-radius: 20px;
+    border: 3px solid #474946;
+    -webkit-box-shadow: 5px 5px #474946;
+            box-shadow: 5px 5px #474946;
+  }
+  .projectImg {
+    display: none;
+  }
+  .projectImgMobile {
+    display: inline-block;
+  }
+  .projectContainer .projectText {
+    width: 70%;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    margin: 40px;
+  }
+}
+
 .skills,
 .skillsContainer {
   margin-top: 5%;
@@ -646,6 +806,10 @@ header {
   transition: color 0.5s, transform 0.5s, -webkit-transform 0.5s;
 }
 
+.skillUL li h4 {
+  text-align: center;
+}
+
 .skillUL li:hover h4,
 .skillUL li:hover {
   color: #1995AD;
@@ -682,6 +846,20 @@ header {
   fill: #1995AD;
 }
 
+@media (max-width: 1145px) {
+  .skillUL {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media (max-width: 490px) {
+  .skillUL li {
+    font-size: 0.9rem;
+  }
+}
+
 .connect {
   margin-top: 5%;
   margin-bottom: 5%;
@@ -706,6 +884,7 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  text-align: center;
 }
 
 .connectText a {
@@ -889,8 +1068,50 @@ textarea {
   margin: 20px 0;
 }
 
+@media (max-width: 580px) {
+  .form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .nameEmail,
+  .messageConnect {
+    text-align: center;
+    margin: 0;
+  }
+}
+
+@media (max-width: 430px) {
+  .social {
+    margin: 0;
+  }
+  .social a {
+    margin: 0 5px;
+  }
+  .social a h4:hover {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  .connect p,
+  .connect .social,
+  .social a i,
+  .social a h4 {
+    font-size: 1rem;
+  }
+}
+
 footer {
   padding: 30px 0;
   text-align: center;
   background: #A1D6E2;
+}
+
+@media (max-width: 550px) {
+  footer p {
+    font-size: 0.9rem;
+  }
 }
