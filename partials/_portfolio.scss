@@ -12,6 +12,13 @@
   align-items: center;
 }
 
+.projectImg {
+  background-color: $background;
+  z-index: 2;
+}
+
+
+
 .portfolioText h2 {
   margin: 10px 0;
   font-size: 3rem;

@@ -179,10 +179,6 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   overflow: hidden;
 }
 
-body {
-  background: blue;
-}
-
 .actorContainer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -212,6 +208,7 @@ body {
 
 html {
   font-size: 125%;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -402,7 +399,7 @@ header .container {
   left: 85%;
   height: 50px;
   background: #F1F1F2;
-  z-index: 2;
+  z-index: 4;
 }
 
 .sticky {
@@ -410,7 +407,7 @@ header .container {
   top: 0%;
   left: 95%;
   height: 50px;
-  z-index: 1;
+  z-index: 4;
 }
 
 .menu {
@@ -587,12 +584,44 @@ header {
 }
 
 @media (max-width: 460px) {
+  h1 {
+    margin-top: 60px;
+  }
   .menuContainer {
     top: 5%;
   }
   .sticky {
     top: 0%;
     left: 80%;
+  }
+  .click a {
+    font-size: 1rem;
+    margin: 0;
+    z-index: 5;
+  }
+  .menuLines {
+    left: -250%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    z-index: 6;
+  }
+  .fa-times {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .mobileDisplay {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  .mobileDisplay li {
+    margin-right: 10px;
   }
 }
 
@@ -683,6 +712,11 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.projectImg {
+  background-color: #F1F1F2;
+  z-index: 2;
 }
 
 .portfolioText h2 {

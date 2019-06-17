@@ -11,9 +11,7 @@ $(".menuLink").click(function () {
   $(".toggle").toggle("slide"); 
   if ($(window).scrollTop < navHeight) {
     $(".click").addClass("mobileContainer");
-  } else {
-    $(".click").addClass("mobileContainer");
-  }
+  } 
 
 });
 
@@ -32,17 +30,17 @@ const navSlide = function() {
       $(".click").addClass("mobileContainer");
       $(".menuToggle").addClass("menuLines");
       $(".menuToggle").removeClass("lines");
-      $(".click").removeClass("mobileContainer");
     }
   })
 }
+
 
 //header slide
 const headerSlide = function() {
   $(".header").animate({
     left: "+=105%",
   }, {
-      duration: 3000
+      duration: 2000
     });
 }
 
