@@ -1,0 +1,74 @@
+.confettiContainer {
+  height: 100%;
+}
+
+.confetti {
+  height: 8px;
+  width: 8px;
+  background: $accentDark;
+  box-shadow: 2px 2px goldenrod;
+  border-radius: 50%;
+  position: absolute;
+  top: -10%;
+  will-change: transform;
+  animation-name: fall;
+  animation-duration: 21s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.confettiBig {
+  height: 12px;
+  width: 12px;
+  background: $accentDark;
+  box-shadow: 2px 2px goldenrod;
+  border-radius: 50%;
+  position: absolute;
+  top: -10%;
+  will-change: transform;
+  animation-name: fall;
+  animation-duration: 21s;
+  animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+
+.one {
+  left: 3%;
+  animation-delay: 2s;
+}
+
+.two {
+  left: 9%;
+  animation-delay: 4s;
+}
+
+.one {
+  left: 14%;
+  animation-delay: 2s;
+}
+
+.three {
+  left: 19%;
+  animation-delay: 3s;
+}
+
+.four {
+  left: 25%;
+  animation-delay: 4s;
+}
+
+.five {
+  left: 3%;
+  animation-delay: 2s;
+}
+
+
+
+
+
+@keyframes fall {
+
+    0% {top: -10%}
+    100% {top: 110%}
+	
+}
