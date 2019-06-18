@@ -23,6 +23,25 @@
   color: $accentDark;
 }
 
+*:focus,
+*:active {
+  color: $accentDark;
+}
+
+@media (max-width: 550px) {
+  .actor,
+  .actor a {
+  font-size: 2rem;
+}
+}
+
+@media (max-width: 305px) {
+  .actor,
+  .actor a {
+  font-size: 1.5rem;
+}
+}
+
 html {
     font-size: 125%;
     scroll-behavior: smooth;
@@ -112,13 +131,21 @@ ul {
 button {
   border-radius: 10px;
   border: 2px solid $accentDark;
-  padding: 5px 10px;
+  padding: 5px 25px;
   transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.live {
+  padding: 5px 15px;
 }
 
 button:hover,
 .form input[type="submit"]:hover {
   background-color: $accent;
+}
+
+button:hover {
+  color: $accentDark;
 }
 
 button:active,

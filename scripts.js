@@ -52,7 +52,7 @@ const navSlide = function() {
 //header slide
 const headerSlide = function() {
   $(".header").animate({
-    left: "+=105%",
+    left: "+=115%",
   }, {
       duration: 2000
     });

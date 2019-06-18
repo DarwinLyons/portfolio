@@ -1,74 +1,496 @@
-.confettiContainer {
-  height: 100%;
-}
-
-.confetti {
+.firework {
   height: 8px;
   width: 8px;
   background: $accentDark;
   box-shadow: 2px 2px goldenrod;
   border-radius: 50%;
   position: absolute;
-  top: -10%;
+}
+
+$particles: 50;
+$width: 500;
+$height: 500;
+
+// Create the explosion...
+$box-shadow: ();
+$box-shadow2: ();
+@for $i from 0 through $particles {
+  $box-shadow: $box-shadow,
+               random($width)-$width / 2 + px
+               random($height)-$height / 1.2 + px
+               hex(random($accentDark));
+  $box-shadow2: $box-shadow2, 0 0 #fff
+}
+@mixin keyframes ($animationName) {
+    @-webkit-keyframes #{$animationName} {
+        @content;
+    }
+
+    @-moz-keyframes #{$animationName} {
+        @content;
+    }
+
+    @-o-keyframes #{$animationName} {
+        @content;
+    }
+
+    @-ms-keyframes #{$animationName} {
+        @content;
+    }
+
+    @keyframes #{$animationName} {
+        @content;
+    }
+}
+
+@mixin animation-delay ($settings) {
+    animation-delay: $settings;
+}
+
+@mixin animation-duration ($settings) {
+    animation-duration: $settings;
+}
+
+@mixin animation ($settings) {
+    animation: $settings;
+}
+
+@mixin transform ($settings) {
+    transform: $settings;
+}
+
+
+.header > .firework {
+  box-shadow: $box-shadow2;
+  @include animation((1s bang ease-out 3 backwards, 1s gravity ease-in 3 backwards, 5s position linear backwards));
+}
+        
+@include keyframes(bang) {
+  to {
+    box-shadow:$box-shadow;
+  }
+}
+    
+@include keyframes(gravity)  {
+  to {
+    @include transform(translateY(200px));
+    opacity: 0;
+  }
+}
+    
+@include keyframes(position) {
+  0%, 19.9% {
+    margin-top: 10%;
+    margin-left: 40%;
+  }
+  20%, 39.9% {
+    margin-top: 40%;
+    margin-left: 30%;
+  }
+  40%, 59.9% {  
+    margin-top: 20%;
+    margin-left: 70%
+  }
+  60%, 79.9% {  
+    margin-top: 30%;
+    margin-left: 20%;
+  }
+  80%, 99.9% {  
+    margin-top: 30%;
+    margin-left: 80%;
+  }
+}
+
+
+
+.confettiContainer {
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.confetti {
+  position: absolute;
+  height: 8px;
+  width: 8px;
+  background: $accentDark;
+  box-shadow: 2px 2px goldenrod;
+  border-radius: 50%;
+  top: 10%;
   will-change: transform;
   animation-name: fall;
-  animation-duration: 21s;
+  animation-duration: 115s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
+  transition: opacity 21s ease;
+  z-index: -1;
 }
 
 .confettiBig {
+  position: absolute;
   height: 12px;
   width: 12px;
   background: $accentDark;
   box-shadow: 2px 2px goldenrod;
   border-radius: 50%;
   position: absolute;
-  top: -10%;
+  top: 10%;
   will-change: transform;
   animation-name: fall;
-  animation-duration: 21s;
+  animation-duration: 70s;
   animation-timing-function: linear;
-	animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  transition: opacity 18s ease;
+  z-index: -1;
 }
 
 .one {
   left: 3%;
-  animation-delay: 2s;
+  // animation-delay: 0s;
 }
 
 .two {
-  left: 9%;
-  animation-delay: 4s;
-}
-
-.one {
-  left: 14%;
-  animation-delay: 2s;
+  left: 25%;
+  // animation-delay: 1.5s;
 }
 
 .three {
-  left: 19%;
-  animation-delay: 3s;
+  left: 79%;
+  // animation-delay: 2s;
 }
 
 .four {
-  left: 25%;
+  left: 77%;
   animation-delay: 4s;
 }
 
 .five {
-  left: 3%;
-  animation-delay: 2s;
+  left: 5%;
+  animation-delay: 8s;
 }
 
+.six {
+  left: 15%;
+  animation-delay: 9s;
+}
 
+.seven {
+  left: 30%;
+  animation-delay: 7s;
+}
+.eight {
+  left: 60%;
+  animation-delay: 10s;
+}
+
+.nine {
+  left: 75%;
+  animation-delay: 6s;
+}
+
+.ten {
+  left: 12%;
+  animation-delay: 11s;
+}
+
+.eleven {
+  left: 24%;
+  animation-delay: 12s;
+}
+
+.twelve {
+  left: 44%;
+  animation-delay: 13s;
+}
+
+.thirteen {
+  left: 64%;
+  animation-delay: 14s;
+}
+
+.fourteen {
+  left: 84%;
+  animation-delay: 15s;
+}
+
+.fifteen {
+  left: 93%;
+  animation-delay: 16s;
+}
+
+.sixteen {
+  left: 10%;
+  animation-delay: 17s;
+}
+
+.seventeen {
+  left: 35%;
+  animation-delay: 18s;
+}
+
+.eighteen {
+  left: 66%;
+  animation-delay: 19s;
+}
+
+.nineteen {
+  left: 3%;
+  animation-delay: 20s;
+}
+
+.twenty {
+  left: 25%;
+  animation-delay: 24s;
+}
+
+.twentyOne {
+  left: 79%;
+  animation-delay: 22s;
+}
+
+.twentyTwo {
+  left: 77%;
+  animation-delay: 23s;
+}
+
+.twentyThree {
+  left: 5%;
+  animation-delay: 25s;
+}
+
+.twentyFour {
+  left: 15%;
+  animation-delay: 28s;
+}
+
+.twentyFive {
+  left: 30%;
+  animation-delay: 27s;
+}
+.twentySix {
+  left: 60%;
+  animation-delay: 26s;
+}
+
+.twentySeven {
+  left: 75%;
+  animation-delay:31s;
+}
+
+.twentyEight {
+  left: 12%;
+  animation-delay: 30s;
+}
+
+.twentyNine {
+  left: 24%;
+  animation-delay: 29s;
+}
+
+.thirty {
+  left: 44%;
+  animation-delay: 32s;
+}
+
+.thirtyOne {
+  left: 64%;
+  animation-delay: 34s;
+}
+
+.thirtyTwo {
+  left: 84%;
+  animation-delay: 33s;
+}
+
+.thirtyThree {
+  left: 93%;
+  animation-delay: 35s;
+}
+
+.thirtyFour {
+  left: 10%;
+  animation-delay: 37s;
+}
+
+.thirtyFive {
+  left: 35%;
+  animation-delay: 36s;
+}
+
+.thirtySix {
+  left: 66%;
+  animation-delay: 43s;
+}
+
+.thirtySeven {
+  left: 3%;
+  animation-delay: 33s;
+}
+
+.thirtyEight {
+  left: 25%;
+  animation-delay: 40s;
+}
+
+.thirtyNine {
+  left: 79%;
+  animation-delay: 48s;
+}
+
+.forty {
+  left: 77%;
+  animation-delay: 42s;
+}
+
+.fortyOne {
+  left: 5%;
+  animation-delay: 41s;
+}
+
+.fortyTwo {
+  left: 15%;
+  animation-delay: 45s;
+}
+
+.fortyFive {
+  left: 30%;
+  animation-delay: 44s;
+}
+.fortySix {
+  left: 60%;
+  animation-delay: 46s;
+}
+
+.fortySeven {
+  left: 75%;
+  animation-delay: 49s;
+}
+
+.fortyEight {
+  left: 12%;
+  animation-delay: 47s;
+}
+
+.fortyNine {
+  left: 24%;
+  animation-delay: 48s;
+}
+
+.fifty {
+  left: 44%;
+  animation-delay: 50s;
+}
+
+.fiftyOne {
+  left: 64%;
+  animation-delay: 49s;
+}
+
+.fiftyTwo {
+  left: 84%;
+  animation-delay: 51s;
+}
+
+.fiftyThree {
+  left: 93%;
+  animation-delay: 53s;
+}
+
+.fiftyFour {
+  left: 10%;
+  animation-delay: 54s;
+}
+
+.fiftyFive {
+  left: 35%;
+  animation-delay: 52s;
+}
+
+.fiftySix {
+  left: 66%;
+  animation-delay: 57s;
+}
+
+.fiftySeven {
+  left: 3%;
+  animation-delay: 55s;
+}
+
+.fiftyEight {
+  left: 25%;
+  animation-delay: 56s;
+}
+
+.fiftyNine {
+  left: 79%;
+  animation-delay: 57s;
+}
+
+.sixty {
+  left: 77%;
+  animation-delay: 59s;
+}
+
+.sixtyOne {
+  left: 5%;
+  animation-delay: 58s;
+}
+
+.sixtyTwo {
+  left: 15%;
+  animation-delay: 60s;
+}
+
+.sixtyThree {
+  left: 30%;
+  animation-delay: 62s;
+}
+.sixtyFour {
+  left: 60%;
+  animation-delay: 61s;
+}
+
+.sixtyFive{
+  left: 75%;
+  animation-delay:64s;
+}
+
+.sixtySix {
+  left: 12%;
+  animation-delay: 63s;
+}
+
+.sixtySeven {
+  left: 24%;
+  animation-delay: 65s;
+}
+
+.sixtyEight {
+  left: 44%;
+  animation-delay: 67s;
+}
+
+.sixtyNine {
+  left: 64%;
+  animation-delay: 66s;
+}
+
+.seventy {
+  left: 84%;
+  animation-delay: 69s;
+}
 
 
 
 @keyframes fall {
 
-    0% {top: -10%}
-    100% {top: 110%}
+    0% {
+      top: 20%;
+      // opacity: 1;
+    }
+    100% {
+      top: 110%;
+      // opacity: 0;
+    }
 	
 }
