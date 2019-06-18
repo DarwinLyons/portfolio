@@ -1,8 +1,16 @@
 header {
   height: 100vh;
   position: relative;
-  background-image: linear-gradient(-55deg, $background 50%, $accent 50%);
+  // background-image: linear-gradient(-55deg, $background 50%, $accent 50%);
   // z-index: -2;
+}
+
+.linearGradient {
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  background-image: linear-gradient(-55deg, $background 50%, $accent 50%);
+  z-index: -1;
 }
 
 header nav {
@@ -144,16 +152,15 @@ header .container {
 }
 
 .header {
-  position: absolute;
-  top: 30%;
   left: -110%;
+  position: absolute;
+  top: 25%;
   display: flex;
   height: 60vh;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  z-index: 1;
 }
 
 .header h4 {
