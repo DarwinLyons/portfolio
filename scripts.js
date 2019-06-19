@@ -40,17 +40,6 @@ const smoothScroll = function () {
 // variable for page 
 const page = $("html, body");
 
-//variables for nav links
-// const aboutNav = document.getElementById("aboutNav");
-// const portfolioNav = document.getElementById("portfolioNav");
-// const skillsNav = document.getElementById("skillsNav");
-// const contactNav = document.getElementById("contactNav");
-
-// ('$aboutNav')page.animate({ scrollTop: $(`#about`).offset().top }, 2000, function () {
-//   // remove the listeners added for scroll above 
-//   app.page.off(`scroll mousedown wheel DOMMouseScroll mousewheel keyup touchmove`);
-// });
-
 //variable for height of window minus nav
 let navHeight = $(window).height() - 50;
 

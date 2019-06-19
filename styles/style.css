@@ -1056,19 +1056,6 @@ header h3 {
   text-align: center;
 }
 
-.connectLinks p a {
-  border-bottom: 3px solid #1995AD;
-  -webkit-transition: -webkit-transform 0.3s;
-  transition: -webkit-transform 0.3s;
-  transition: transform 0.3s;
-  transition: transform 0.3s, -webkit-transform 0.3s;
-}
-
-.connectLinks p a:hover {
-  -webkit-transform: scale(1.7);
-          transform: scale(1.7);
-}
-
 .connectText p:nth-of-type(1) {
   margin: 1% 0;
 }
@@ -1109,9 +1096,9 @@ label {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: space-between;
+      -ms-flex-align: space-between;
+          align-items: space-between;
   color: #474946;
   margin: 3% 0 0 0;
 }
@@ -1229,7 +1216,7 @@ textarea {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-top: 5%;
+  margin-top: 3%;
 }
 
 .socialLinks {
@@ -1282,10 +1269,23 @@ textarea {
 }
 
 .social:hover a,
-.social:hover a h4 {
+.social:hover a h4,
+.googleForm:hover {
   color: #1995AD;
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
+}
+
+.googleForm {
+  margin-bottom: 40px;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+.googleForm a {
+  border-bottom: 3px solid #1995AD;
 }
 
 @media (max-width: 830px) {
@@ -1309,7 +1309,7 @@ textarea {
     margin-top: 20px;
   }
   .connectLinks h2 {
-    margin-top: 5%;
+    margin: 5% 0;
   }
 }
 
@@ -1327,10 +1327,6 @@ textarea {
   .messageConnect {
     text-align: center;
     margin: 0;
-  }
-  .connectLinks p a:hover {
-    -webkit-transform: scale(1.1);
-            transform: scale(1.1);
   }
 }
 
@@ -1361,9 +1357,6 @@ textarea {
   .nameEmail,
   .messageConnect {
     width: 70%;
-  }
-  .connectLinks p a {
-    display: block;
   }
 }
 
