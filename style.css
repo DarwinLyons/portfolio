@@ -442,7 +442,7 @@ header .container {
 .sticky {
   position: fixed;
   top: 0%;
-  left: 90%;
+  left: 95%;
   height: 50px;
   z-index: 4;
   border-left: 25px solid #F1F1F2;
@@ -465,6 +465,9 @@ header .container {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   z-index: 999;
 }
 
@@ -480,7 +483,15 @@ header .container {
   transition: -webkit-transform 0.3s;
   transition: transform 0.3s;
   transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+.line1,
+.line3 {
   width: 50px;
+}
+
+.line2 {
+  width: 70px;
 }
 
 .change.line1 {
@@ -501,7 +512,7 @@ header .container {
 .menuLines {
   position: absolute;
   top: 0;
-  left: -215%;
+  left: -150%;
   -webkit-transition: left 0.5s;
   transition: left 0.5s;
   background: #F1F1F2;
@@ -647,7 +658,7 @@ header h3 {
   }
   .sticky {
     top: 0%;
-    left: calc(100% - 100px);
+    left: calc(100% - 55px);
     background: #F1F1F2;
   }
   .header h1 {
@@ -670,7 +681,7 @@ header h3 {
   }
   .sticky {
     top: 0%;
-    left: calc(100% - 100px);
+    left: calc(100% - 55px);
   }
   .click a {
     font-size: 1rem;
@@ -777,7 +788,6 @@ header h3 {
 
 .projectImgMobile {
   display: none;
-  width: 70%;
 }
 
 .portfolioText {
@@ -827,7 +837,7 @@ header h3 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 80vh;
+  height: 100vh;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -879,7 +889,7 @@ header h3 {
     -webkit-box-ordinal-group: 1;
         -ms-flex-order: 0;
             order: 0;
-    width: 70%;
+    width: 85%;
   }
   .projectContainer .projectImgMobile img {
     border-radius: 20px;
@@ -963,7 +973,7 @@ header h3 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 25px;
+  margin: 25px 15px;
   -webkit-transition: color 0.5s, -webkit-transform 0.5s;
   transition: color 0.5s, -webkit-transform 0.5s;
   transition: color 0.5s, transform 0.5s;
@@ -1021,7 +1031,6 @@ header h3 {
 @media (max-width: 490px) {
   .skillUL li {
     font-size: 0.9rem;
-    margin: 25px 20px;
   }
 }
 
@@ -1052,21 +1061,8 @@ header h3 {
   text-align: center;
 }
 
-.connectLinks p {
-  text-align: center;
-}
-
-.connectLinks p a {
+.connectText a {
   border-bottom: 3px solid #1995AD;
-  -webkit-transition: -webkit-transform 0.3s;
-  transition: -webkit-transform 0.3s;
-  transition: transform 0.3s;
-  transition: transform 0.3s, -webkit-transform 0.3s;
-}
-
-.connectLinks p a:hover {
-  -webkit-transform: scale(1.7);
-          transform: scale(1.7);
 }
 
 .connectText p:nth-of-type(1) {
@@ -1095,11 +1091,6 @@ form {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-bottom: 25px;
-}
-
-label {
-  margin-bottom: 20px;
 }
 
 .form {
@@ -1109,11 +1100,8 @@ label {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   color: #474946;
-  margin: 3% 0 0 0;
+  margin-top: 3%;
 }
 
 .nameEmail,
@@ -1125,25 +1113,17 @@ label {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  height: 100%;
 }
 
 .nameEmail {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  margin-right: 35px;
+  margin-right: 5%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .messageConnect {
-  margin-left: 35px;
+  margin-left: 5%;
 }
 
 input,
@@ -1155,19 +1135,17 @@ textarea {
   border-bottom: 3px solid #A1D6E2;
   -webkit-transition: background 0.5s;
   transition: background 0.5s;
-  resize: none;
 }
 
+.name,
 textarea {
-  padding: 15px;
+  margin-bottom: 7%;
 }
 
 .nameEmail input[type="text"],
 .nameEmail input[type="email"],
 .form textarea:focus {
   color: #474946;
-  margin-top: 20px;
-  width: 100%;
   -webkit-transition: background-color 0.3s;
   transition: background-color 0.3s;
 }
@@ -1186,8 +1164,6 @@ textarea {
 }
 
 .form input[type="submit"] {
-  border: 3px solid #1995AD;
-  background: #A1D6E2;
   padding: 10px;
   border-radius: 10px;
   width: 120px;
@@ -1195,27 +1171,7 @@ textarea {
   transition: background-color 0.3s, -webkit-transform 0.3s;
   transition: background-color 0.3s, transform 0.3s;
   transition: background-color 0.3s, transform 0.3s, -webkit-transform 0.3s;
-  margin: 25px auto;
-}
-
-.form input[type="submit"]:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-}
-
-.form input[type="submit"]:focus {
-  -webkit-box-shadow: 5px 5px 5px #1995AD;
-          box-shadow: 5px 5px 5px #1995AD;
-}
-
-.form input[type="submit"]:active {
-  -webkit-transform: scale(0.9);
-          transform: scale(0.9);
-}
-
-.form input[type="submit"]:focus {
-  -webkit-box-shadow: 5px 5px 5px #1995AD;
-          box-shadow: 5px 5px 5px #1995AD;
+  margin: 0 auto;
 }
 
 .connectLinks {
@@ -1259,7 +1215,6 @@ textarea {
   transition: color 0.3s, -webkit-transform 0.3s;
   transition: color 0.3s, transform 0.3s;
   transition: color 0.3s, transform 0.3s, -webkit-transform 0.3s;
-  text-align: center;
 }
 
 .social,
@@ -1288,29 +1243,8 @@ textarea {
           transform: scale(1.1);
 }
 
-@media (max-width: 830px) {
-  .form {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    text-align: center;
-  }
-  label {
-    margin-top: 20px;
-  }
-  .nameEmail {
-    margin-right: 0;
-  }
-  .messageConnect {
-    margin-left: 0;
-  }
-  .emailDiv {
-    margin-top: 20px;
-  }
-  .connectLinks h2 {
-    margin-top: 5%;
-  }
+.email {
+  margin: 20px 0;
 }
 
 @media (max-width: 580px) {
@@ -1328,17 +1262,9 @@ textarea {
     text-align: center;
     margin: 0;
   }
-  .connectLinks p a:hover {
-    -webkit-transform: scale(1.1);
-            transform: scale(1.1);
-  }
 }
 
 @media (max-width: 430px) {
-  .nameEmail,
-  .messageConnect {
-    width: 80%;
-  }
   .social {
     margin: 0;
   }
@@ -1354,16 +1280,6 @@ textarea {
   .social a i,
   .social a h4 {
     font-size: 1rem;
-  }
-}
-
-@media (max-width: 350px) {
-  .nameEmail,
-  .messageConnect {
-    width: 70%;
-  }
-  .connectLinks p a {
-    display: block;
   }
 }
 

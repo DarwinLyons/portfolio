@@ -17,10 +17,18 @@
   align-items: center;
   text-align: center;
 }
-
-.connectText a {
-  border-bottom: 3px solid $accentDark;
+.connectLinks p {
+  text-align: center;
 }
+
+.connectLinks p a {
+  border-bottom: 3px solid $accentDark;
+  transition: transform 0.3s;
+}
+
+.connectLinks p a:hover {
+    transform: scale(1.7);
+  }
 
 .connectText p:nth-of-type(1) {
   margin: 1% 0;
@@ -37,28 +45,38 @@ form {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-bottom: 25px;
+}
+
+label {
+  margin-bottom: 20px;
 }
 
 .form {
   display: flex;
+  // flex-direction: column;
   justify-content: center;
+  align-items: center;
   color: $text;
-  margin-top: 3%;
+  margin: 3% 0 0 0;
 }
 
 .nameEmail,
 .messageConnect {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
 }
 
 .nameEmail {
-  margin-right: 5%;
-  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  margin-right: 35px;
 }
 
 .messageConnect {
-  margin-left: 5%;
+  margin-left: 35px;
 }
 
 input, 
@@ -69,17 +87,21 @@ textarea {
   border-right: 3px solid $accent;
   border-bottom: 3px solid $accent;
   transition: background 0.5s;
+  resize: none;
 }
 
-.name,
 textarea {
-  margin-bottom: 7%;
+  padding: 15px;
 }
+
+
 
 .nameEmail input[type="text"],
 .nameEmail input[type="email"],
 .form textarea:focus {
   color: $text;
+  margin-top: 20px;
+  width: 100%;
   transition: background-color 0.3s,
 }
 
@@ -96,11 +118,29 @@ textarea {
 }
 
 .form input[type="submit"] {
+  border: 3px solid $accentDark;
+  background: $accent;
   padding: 10px;
   border-radius: 10px;
   width: 120px;
   transition: background-color 0.3s, transform 0.3s;
-  margin: 0 auto;
+  margin: 25px auto;
+}
+
+.form input[type="submit"]:hover {
+  transform: scale(1.1);
+}
+
+.form input[type="submit"]:focus {
+  box-shadow: 5px 5px 5px $accentDark;
+}
+
+.form input[type="submit"]:active {
+  transform: scale(0.9);
+}
+
+.form input[type="submit"]:focus {
+  box-shadow: 5px 5px 5px $accentDark;
 }
 
 .connectLinks {
@@ -128,6 +168,7 @@ textarea {
 .social h4 {
   margin-top: 10px;
   transition: color 0.3s, transform 0.3s;
+  text-align: center;
 }
 
 
@@ -146,9 +187,33 @@ textarea {
   transform: scale(1.1);
 }
 
-.email {
-  margin: 20px 0;
+@media (max-width: 830px) {
+  .form {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  label {
+  margin-top: 20px;
 }
+
+.nameEmail {
+  margin-right: 0;
+}
+
+.messageConnect {
+  margin-left: 0;
+}
+
+.emailDiv {
+  margin-top: 20px;
+}
+
+.connectLinks h2 {
+  margin-top: 5%;
+}
+}
+
 
 @media (max-width: 580px) {
   .form {
@@ -161,9 +226,18 @@ textarea {
     text-align: center;
     margin: 0;
   }
+
+  .connectLinks p a:hover {
+    transform: scale(1.1);
+  }
 }
 
 @media (max-width: 430px) {
+
+  .nameEmail,
+  .messageConnect {
+    width: 80%;
+  }
   .social {
     margin: 0;
   }
@@ -182,4 +256,17 @@ textarea {
   .social a h4 {
     font-size: 1rem;
   }
+}
+
+@media (max-width: 350px) {
+  .nameEmail,
+  .messageConnect {
+    width: 70%;
+  }
+
+  .connectLinks p a {
+    display: block;
+  }
+
+
 }

@@ -1,8 +1,6 @@
 header {
   height: 100vh;
   position: relative;
-  // background-image: linear-gradient(-55deg, $background 50%, $accent 50%);
-  // z-index: -2;
 }
 
 .linearGradient {
@@ -78,9 +76,11 @@ header .container {
 .sticky{
   position: fixed;
   top: 0%;
-  left: 95%;
+  left: 90%;
   height: 50px;
   z-index: 4;
+  border-left: 25px solid $background;
+  border-radius: 5px;
 }
 
 .menu {
@@ -95,8 +95,6 @@ header .container {
   right: 20px;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
-  // background-color: $background;
   z-index: 999;
 }
 
@@ -109,15 +107,7 @@ header .container {
   margin: 7px 0;
   border-radius: 20px;
   transition: transform 0.3s;
-}
-
-.line1,
-.line3 {
   width: 50px;
-}
-
-.line2 {
-  width: 70px;
 }
 
 .change.line1 {
@@ -136,7 +126,7 @@ header .container {
 .menuLines {
   position: absolute;
   top: 0;
-  left: -150%;
+  left: -215%;
   transition: left 0.5s;
   background: $background;
   display: flex;
@@ -258,7 +248,7 @@ span {
 
   .sticky {
     top: 0%;
-    left: calc(100% - 55px);
+    left: calc(100% - 100px);
     background: $background;
   }
 
@@ -287,7 +277,7 @@ span {
 
   .sticky {
     top: 0%;
-    left: calc(100% - 55px)
+    left: calc(100% - 100px)
   }
 
   .click a {
@@ -297,7 +287,7 @@ span {
   }
 
   .menuLines {
-    left: -250%;
+    left: -227%;
     flex-direction: column;
     align-items: center;
     z-index: 6;

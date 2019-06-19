@@ -1,3 +1,56 @@
+//submit a tags when enter
+const accessibleNav = function () {
+  console.log("access!")
+  function navigateLink(evt) {
+    if (evt.type == "click" ||
+      evt.keyCode == sap.ui.keycodes.ENTER) {
+      const ref = evt.target != null ? evt.target : evt.srcElement;
+      if (ref) window.open(ref.getAttribute("href"), "_blank");
+    }
+  }
+
+}
+
+// Add smooth scrolling to all links
+const smoothScroll = function () {
+  $("a").on('click', function (event) {
+  
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+  
+      // Store hash
+      const hash = this.hash;
+  
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function () {
+  
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+
+}
+
+// variable for page 
+const page = $("html, body");
+
+//variables for nav links
+// const aboutNav = document.getElementById("aboutNav");
+// const portfolioNav = document.getElementById("portfolioNav");
+// const skillsNav = document.getElementById("skillsNav");
+// const contactNav = document.getElementById("contactNav");
+
+// ('$aboutNav')page.animate({ scrollTop: $(`#about`).offset().top }, 2000, function () {
+//   // remove the listeners added for scroll above 
+//   app.page.off(`scroll mousedown wheel DOMMouseScroll mousewheel keyup touchmove`);
+// });
+
 //variable for height of window minus nav
 let navHeight = $(window).height() - 50;
 
@@ -14,20 +67,6 @@ const lineAnimation = function() {
   })
 };
 
-
-//nav bar slide off on click
-// $(".fa-times").click(function () {
-//   $(".toggle").toggle("slide right");
-// });
-
-// //nav bar slide on on click
-// $(".menuLink").click(function () {
-//   $(".toggle").toggle("slide"); 
-//   if ($(window).scrollTop < navHeight) {
-//     $(".click").addClass("mobileContainer");
-//   } 
-
-// });
 
 const navSlide = function() {
   //sticky nav
@@ -62,11 +101,15 @@ const init = function() {
   navSlide();
   headerSlide();
   lineAnimation();
+  smoothScroll();
+  accessibleNav();
 }
 
 //document ready
 $(document).ready(function(){
 
   init();
+
+    
 
 })

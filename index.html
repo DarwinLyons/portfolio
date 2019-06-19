@@ -130,11 +130,11 @@
                       <li class="mobile"><a href="actor.html">Theatre and Film</a></li>
                     </div>
                     <div class="click mobileContainer">
-                      <li><a href="#about">About</a></li>
-                      <li><a href="#portfolio">Portfolio</a></li>
-                      <li><a href="#skills">Skills</a></li>
-                      <li><a href="#contact">Contact</a></li>
-                      <li><a href="#start" class="start">Start a Project</a></li>
+                      <li><a href="#about" id="aboutNav">About</a></li>
+                      <li><a href="#portfolio" id="portfolioNav">Portfolio</a></li>
+                      <li><a href="#skills" id="skillsNav">Skills</a></li>
+                      <li><a href="#contact" id="contactNav">Contact</a></li>
+                      <li><a href="#start" class="start" id="startNav">Start a Project</a></li>
 
                     </div>
                   </ul>
@@ -168,7 +168,7 @@
               <h2 tabindex="4">About</h2>
 
             </div>
-            <p>Hi! My name is Darwin Lyons. I’m a Front-End Developer based in Toronto. I'm available for your projects! I'm a graduate of HackerYou's immersive bootcamp. I'm excited to make your
+            <p>Hi! My name is Darwin Lyons. I’m a Front-End Developer based in Toronto. I'm available for your projects! I come to web development from theatre and film. I'm a graduate of HackerYou's immersive bootcamp. I'm excited to make your
             personal website, company website, interactive app or internet dreams a reality!
             </p>
           </div>
@@ -350,26 +350,29 @@
             <div class="connectContainer">
               <h2>Want to work with me?</h2>
             </div>
-            <p>Fill out a contact form for more information. </p> 
-            <p>Or click this <a href="https://docs.google.com/forms/d/e/1FAIpQLSeRDWScBrxGjNDWb_PhEyGzj7QsiCuUaVVniWGe8NeP_Y6Q8A/viewform?usp=sf_link" id="start">Start A Project link</a> to start a conversation about your awesome ideas!</p>
             <!-- connectText -->
           </div>
           <form class="form" action="https://formspree.io/hello@darwinlyons.com" method="POST">
             <div class="form">
               <div class="nameEmail">
-                <label for=" name">Your Name:</label>
-                <input type="text" name="name" id="name" class="name" tabindex="15">
-                <label for="email">Your Email Address:</label>
-                <input type="email" name="_replyto" id="email" class="email" tabindex="16">
+                <div>
+                  <label for="name">Your Name:</label>
+                  <input type="text" name="name" id="name" class="name" tabindex="15">
+                </div>
+                <div class="emailDiv">
+                  <label for="email">Your Email Address:</label>
+                  <input type="email" name="_replyto" id="email" class="email" tabindex="16">
+                </div>
               </div>
               <div class="messageConnect">
                 <label for="message">Your Message:</label>
-                <textarea name="message" cols="30" rows="4" id="message" class="message" tabindex="17"></textarea>
+                <textarea name="message" cols="40" rows="7" id="message" class="message" tabindex="17" placeholder="Tell me about your project ideas!"></textarea>
               </div>
             </div>
             <input type="submit" value="Connect" class="input" tabindex="18">
           </form>
           <div class="connectLinks">
+            <p>Or click this <a href="https://docs.google.com/forms/d/e/1FAIpQLSeRDWScBrxGjNDWb_PhEyGzj7QsiCuUaVVniWGe8NeP_Y6Q8A/viewform?usp=sf_link"id="start">Start A Project link!</a></p>
             <h2>Get Social!</h2>
             <div class="socialLinks">
               <div class="twitter social" tabindex="19">
@@ -395,7 +398,7 @@
             <div class="email social" tabindex="22">
               <a href = "mailto: whoischarles@gmail.com">
                 <i class="fas fa-envelope" aria-hidden="true"></i>
-                <h4>Email: hello@darwinlyons.com</h4>
+                <h4>Email: whoischarles@darwinlyons.com</h4>
               </a>
             </div> 
             <!-- <div class="start" id="start">
