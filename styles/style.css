@@ -1277,6 +1277,7 @@ textarea {
 }
 
 .googleForm {
+  display: block;
   margin-bottom: 40px;
   -webkit-transition: -webkit-transform 0.3s;
   transition: -webkit-transform 0.3s;
