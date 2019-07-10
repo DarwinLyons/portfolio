@@ -42,12 +42,15 @@ form {
 label {
   margin-bottom: 20px;
 }
-
+form {
+  width: 60%;
+  margin: 0 auto;
+}
 .form {
   display: flex;
-  // flex-direction: column;
+  flex-direction: column;
   justify-content: center;
-  align-items: space-between;
+  align-items: center;
   color: $text;
   margin: 3% 0 0 0;
 }
@@ -58,16 +61,12 @@ label {
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
+  text-align: center;
 }
 
 .nameEmail {
   display: flex;
   flex-direction: column;
-  margin-right: 35px;
-}
-
-.messageConnect {
-  margin-left: 35px;
 }
 
 input, 
@@ -85,13 +84,11 @@ textarea {
   padding: 15px;
 }
 
-
-
 .nameEmail input[type="text"],
 .nameEmail input[type="email"],
 .form textarea:focus {
   color: $text;
-  margin-top: 20px;
+  margin: 20px 0 20px 0;
   width: 100%;
   transition: background-color 0.3s,
 }
@@ -108,7 +105,7 @@ textarea {
   box-shadow: 0 0 5px $accentDark;
 }
 
-.form input[type="submit"] {
+input[type="submit"] {
   border: 3px solid $accentDark;
   background: $accent;
   padding: 10px;
@@ -118,19 +115,19 @@ textarea {
   margin: 25px auto;
 }
 
-.form input[type="submit"]:hover {
+input[type="submit"]:hover {
   transform: scale(1.1);
 }
 
-.form input[type="submit"]:focus {
+input[type="submit"]:focus {
   box-shadow: 5px 5px 5px $accentDark;
 }
 
-.form input[type="submit"]:active {
+input[type="submit"]:active {
   transform: scale(0.9);
 }
 
-.form input[type="submit"]:focus {
+input[type="submit"]:focus {
   box-shadow: 5px 5px 5px $accentDark;
 }
 
