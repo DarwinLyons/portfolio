@@ -1,0 +1,122 @@
+//general 
+figcaption a,
+.actorAbout a {
+  border-bottom: 3px solid $accentDark;
+}
+
+//header 
+
+.actorHeader {
+  height: 100vh;
+}
+
+.headerMain {
+  padding-top: 3%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+}
+
+//all images
+figure {
+  position: relative; 
+}
+
+figcaption {
+  display: block;
+  background: rgba(241,241,242, 0.5);
+  height: 100%;
+  width: 100%;
+  padding-top: 40%;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  font-family: $headertext;
+  color: $text;
+  opacity: 0;
+  transition: opacity 0.3s;
+  z-index: 1;
+}
+
+figure:hover figcaption {
+  opacity: 1;
+}
+
+.headerImg {
+  box-shadow: -15px -15px $accentDark;
+}
+
+.actorJoke h3 {
+  background: $background;
+}
+
+//about
+
+.actorAbout {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+}
+
+
+.actorAbout img {
+  box-shadow: 15px 15px $accentDark;
+}
+
+.download {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.download p {
+  padding: 15px 0 0 15px;
+}
+
+//Past Projects
+
+.past {
+  text-align: center;
+}
+
+.pastIntro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 0;
+}
+
+.pastIntro h2 {
+  padding: 30px 0;
+}
+
+.button:active,
+.button.is-checked {
+  background: $accentDark;
+}
+
+button.is-checked {
+  text-shadow: 0 -1px $text;
+}
+
+.grid {
+  display: flex;
+  flex-direction: row;
+  // justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.gridItem {
+  width: calc(33% - 10px);
+  margin: 5px;
+}
+
+.gridItem:nth-last-of-type(3) {
+  margin: 0;
+}
+
+
+
+

@@ -26,12 +26,12 @@
   <meta property="og:description" content=" Darwin Lyons: I make things in theatre, film and on the internet">
 </head>
 <body>
-  <header>
+  <header class="actorHeader">
     <div class="container wrapperBig">
       <a href="#mainContentIndex" class="skipLink">Skip to main content.</a>
       <nav class="wrapperSmall">
         <div class="title">
-          <div class="joke">
+          <div class="joke actorJoke">
             <h2>Darwin Lyons</h2>
             <h3>Yes my name really is Darwin, <span>surprisingly, I am not very evolved.</span></h3>
           </div>
@@ -78,18 +78,17 @@
           <!-- menu container -->
         </div>
       </nav>
-      <div class="headerMain">
+      <div class="headerMain wrapperSmall">
         <div class="image">
-          <figure>
+          <figure class="headerImg">
             <img src="assets/headshot3.jpg" alt="a picture of Darwin Lyons">
             <figcaption>
-              <p>photocred Calvin Thomas</p>
+              <p>photocred <div><a href="http://www.calvinthomas.ca/" target="_blank">Calvin Thomas</a></div></p>
             </figcaption> <!-- figcaption -->
           </figure> <!-- figure -->
         </div> <!-- image -->
         <div class="headerText">
           <h1>Darwin Lyons</h1>
-          <h3>Front-End Web Developer</h3>
           <h4>I make things in theatre, film and on the internet.</h4>
           <h4>I like funny things, but not mean funny things.</h4>
         </div>
@@ -99,19 +98,23 @@
   </header>
   <main>
     <div class="container wrapperBig">
-      <section class="about wrapperSmall" id="actorAbout">
+      <section class="actorAbout wrapperSmall" id="actorAbout">
           <div class="aboutText" id="mainContentIndex">
             <div class="aboutContainer">
               <h2 tabindex="4">About</h2>
         
             </div>
-            <p>Hi! My name is Darwin Lyons. I’m an <a href="#actor">actor</a>, <a href="#director">director</a>, <a href="#creator">creator</a>, <a href="#educator">educator</a> and <a href="#producer">producer</a> in theatre and film. I make art in the hopes that audiences will be transported to a different world, and then be left with questions about being human. My favourite things are funny things, kind things, and
-            interesting things.
+            <p>Hi! My name is Darwin Lyons. I’m an <a href="#actor">actor</a>, <a href="#director">director</a>, <a href="#creator">creator</a>, <a href="#educator">educator</a> and <a href="#producer">producer</a> in theatre and film. I make art in the hopes that audiences will be transported to a different world, and then be left with questions about what it means to be human. My favourite things are funny things, kind things, andinteresting things.
             </p>
           </div>
-          <div class="img">
-            <img src="assets/headshot4.jpg" alt="Darwin's headshot">
-            <!-- img -->
+          <div class="download">
+            <div class="img">
+              <img src="assets/headshot4.jpg" alt="Darwin's headshot">
+              <!-- img -->
+            </div>
+          
+            <p>Download my <a href="assets/lyonsDarwin.pdf" download target="_blank">actor resume</a> or my<a href="assets/Lyons-Darwin-CV.pdf" download target="_blank"> full artist CV</a></p>
+
           </div>
         <!-- about -->
         </section>
@@ -119,24 +122,45 @@
       <!-- about -->
       </div>
   
-      <div class="past" id="past">
+      <div class="past wrapperSmall" id="past">
+        <div class="pastIntro">
+          <h2 tabindex="5">Past Projects</h2>
+          <div class="button-group filters-button-group">
+            <button class="button is-checked" data-filter="*">Show All</button>
+            <button class="button" data-filter=".actor">Actor</button>
+            <button class="button" data-filter=".director">Director</button>
+            <button class="button" data-filter=".creator">Creator</button>
+            <button class="button" data-filter=".educator">Educator</button>
+            <button class="button" data-filter="producer">Producer</button>
+          </div>
+
+        </div>
         <div class="grid">
-          <div class="gridItem actor">
-            <figure>
-              <img src="assets/headshot4.jpg" alt="a picture of Darwin Lyons">
-              <figcaption>
-                <p>Photocred Calvin Thomas</p>
-              </figcaption> <!-- figcaption -->
-            </figure> <!-- figure -->
+          <div class="gridItem actor review">
+            <p>"Darwin Lyons’ butcher resonates with authenticity ... Her nuanced performance has the audience leaning in, wanting
+              more." </p>
+            <p>
+              <a href="https://www.thetheatrereader.com/reviews/?offset=1461983285728" target="_blank">- Josee Young, The Theatre Reader, Review
+                of Dead Roads </a>
+            </p>
+          </div>
+          <div class="gridItem actor review">
+            <p>"But the real standouts—thankfully—are Paolo Santalucia as Romeo and Darwin Lyons as Juliet. Lyons seems to be
+              playing Juliet as if she were 14, full of pop-song sentimentality and unable to cope with the realities—and dangers—of
+              love in the real world. "</p>
+            <p>
+              <a href="https://www.mooneyontheatre.com/2012/11/08/review-romeo-and-juliet-hart-house/" target="_blank">-Mike Anderson, Mooney on
+                Theatre Review of Romeo and Juliet</a>
+            </p>
+          </div>
+          <div class="gridItem actor review">
+            <p>"Darwin Lyons as the butcher was brash and biting. Her delivery was excellent and seemed to make the audience smile
+              with indulgence... Lyons easily transitioned from snarky to vulnerable." </p>
+            <p>
+              <a href="https://www.mooneyontheatre.com/2016/04/20/review-dead-roads-dead-roads-collective/" target="_blank">- Dana Ewachow, Mooney on Theatre, Review of Dead Roads</a>
+            </p>
           </div>
           <div class="gridItem actor">
-            <figure>
-              <img src="assets/headshot1_opt.jpg" alt="a picture of Darwin Lyons">
-              <figcaption>
-                <p>Photocred Calvin Thomas</p>
-              </figcaption> <!-- figcaption -->
-            </figure> <!-- figure -->
-          </div><div class="gridItem actor">
             <figure>
               <img src="assets/headshot1_opt.jpg" alt="a picture of Darwin Lyons">
               <figcaption>
