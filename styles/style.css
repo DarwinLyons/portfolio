@@ -193,11 +193,6 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   text-align: center;
 }
 
-.actor,
-.actor a {
-  font-size: 3rem;
-}
-
 .actor a {
   border-bottom: 3px solid #1995AD;
 }
@@ -1986,6 +1981,24 @@ button.is-checked {
   margin: 5px;
 }
 
-.gridItem:nth-last-of-type(3) {
+.gridItem:nth-of-type(3) {
   margin: 0;
+}
+
+.review {
+  width: calc(33% - 10px);
+  border: 3px solid #1995AD;
+  -webkit-box-shadow: 5px 5px 5px #1995AD;
+          box-shadow: 5px 5px 5px #1995AD;
+  padding: 15px 15px 0 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
