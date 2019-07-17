@@ -2027,3 +2027,82 @@ button.is-checked {
 .banner figcaption {
   padding-top: 5%;
 }
+
+.connect {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.connect h2 {
+  font-size: 3rem;
+  padding-bottom: 50px;
+}
+
+.connect a {
+  border-bottom: 3px solid #1995AD;
+}
+
+.middleText {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.middleText figure {
+  width: 30%;
+}
+
+.middleText figure img {
+  -webkit-box-shadow: -15px 15px #1995AD;
+          box-shadow: -15px 15px #1995AD;
+}
+
+.love {
+  width: 40%;
+  border: 3px solid #A1D6E2;
+  padding: 50px;
+  -webkit-box-shadow: 5px 5px 5px #A1D6E2;
+          box-shadow: 5px 5px 5px #A1D6E2;
+}
+
+.love p {
+  padding: 22px 0;
+}
+
+.actorForm {
+  width: 60%;
+  border: 3px solid #A1D6E2;
+  -webkit-box-shadow: 5px 5px 5px #A1D6E2;
+          box-shadow: 5px 5px 5px #A1D6E2;
+  margin: 100px 0px;
+}
+
+.actorForm label {
+  margin: 20px;
+}
+
+.actorForm input[type=text],
+.actorForm input[type=email] {
+  width: 45%;
+}
