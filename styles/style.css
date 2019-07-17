@@ -1869,11 +1869,18 @@ figure {
 }
 
 figcaption {
-  display: block;
-  background: rgba(241, 241, 242, 0.5);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: rgba(241, 241, 242, 0.9);
   height: 100%;
   width: 100%;
-  padding-top: 40%;
   position: absolute;
   top: 0%;
   left: 0%;
@@ -1972,6 +1979,9 @@ button.is-checked {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
@@ -1982,7 +1992,7 @@ button.is-checked {
 }
 
 .gridItem:nth-of-type(3) {
-  margin: 0;
+  margin: 5px 0 5px 5px;
 }
 
 .review {
@@ -2001,4 +2011,19 @@ button.is-checked {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.educator,
+.paprika {
+  border: 3px solid #1995AD;
+  -webkit-box-shadow: 5px 5px 5px #1995AD;
+          box-shadow: 5px 5px 5px #1995AD;
+}
+
+.sheSpreads {
+  width: 100%;
+}
+
+.banner figcaption {
+  padding-top: 5%;
 }

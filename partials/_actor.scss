@@ -24,11 +24,12 @@ figure {
 }
 
 figcaption {
-  display: block;
-  background: rgba(241,241,242, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(241,241,242, 0.9);
   height: 100%;
   width: 100%;
-  padding-top: 40%;
   position: absolute;
   top: 0%;
   left: 0%;
@@ -104,7 +105,7 @@ button.is-checked {
 .grid {
   display: flex;
   flex-direction: row;
-  // justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
@@ -114,7 +115,7 @@ button.is-checked {
 }
 
 .gridItem:nth-of-type(3) {
-  margin: 0;
+  margin: 5px 0 5px 5px;
 }
 
 //reviews
@@ -127,6 +128,18 @@ button.is-checked {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+.educator,
+.paprika {
+  border: 3px solid $accentDark;
+  box-shadow: 5px 5px 5px $accentDark;
+}
+.sheSpreads {
+  width: 100%;
+}
+
+.banner figcaption {
+  padding-top: 5%;
 }
 
 
