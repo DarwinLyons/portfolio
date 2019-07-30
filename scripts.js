@@ -87,26 +87,44 @@ const headerSlide = function() {
 }
 
 //actor gallery shuffle
-// init Isotope
-var $grid = $('.grid').isotope({
-  itemSelector: '.gridItem',
-  layoutMode: 'fitRows'
-});
-// bind filter button click
-$('.filters-button-group').on('click', 'button', function () {
-  var filterValue = $(this).attr('data-filter');
-  // use filterFn if matches value
-  filterValue = filterFns[filterValue] || filterValue;
-  $grid.isotope({ filter: filterValue });
-});
-// change is-checked class on buttons
-$('.button-group').each(function (i, buttonGroup) {
-  var $buttonGroup = $(buttonGroup);
-  $buttonGroup.on('click', 'button', function () {
-    $buttonGroup.find('.is-checked').removeClass('is-checked');
-    $(this).addClass('is-checked');
-  });
-});
+// filter .actor items
+// $grid.isotope({ filter: '.actor' });
+
+// // filter .director items
+// $grid.isotope({ filter: '.director' });
+
+// // filter .creator items
+// $grid.isotope({ filter: '.creator' });
+
+// // filter .educator items
+// $grid.isotope({ filter: '.educator' });
+
+// // filter .producer items
+// $grid.isotope({ filter: '.producer' });
+
+// // show all items
+// $grid.isotope({ filter: '*' });
+
+// // hash of functions that match data-filter values
+// const filterFns = {
+//   // show if actor
+//   actor: function () {
+//     const name = $(this).find('.name').text();
+//     return name.match(/actor$/);
+//   },
+//   director: function () {
+//     const name = $(this).find('.name').text();
+//     return name.match(/director$/);
+//   },
+// };
+
+// // filter items on button click
+// $('.filter-button-group').on('click', 'button', function () {
+//   var filterValue = $(this).attr('data-filter');
+//   // use filter function if value matches
+//   filterValue = filterFns[filterValue] || filterValue;
+//   $grid.isotope({ filter: filterValue });
+// });
 
 const init = function() {
   navSlide();

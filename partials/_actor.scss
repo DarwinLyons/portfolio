@@ -11,7 +11,7 @@ figcaption a,
 }
 
 .headerMain {
-  padding-top: 3%;
+  padding-top: 7%;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -38,6 +38,10 @@ figcaption {
   opacity: 0;
   transition: opacity 0.3s;
   z-index: 1;
+}
+.headerMain figcaption,
+.middleText figcaption {
+  flex-direction: column;
 }
 
 figure:hover figcaption {
@@ -111,7 +115,7 @@ button.is-checked {
 
 .gridItem {
   width: calc(33% - 10px);
-  margin: 5px;
+  margin: 15px 5px;
 }
 
 .gridItem:nth-of-type(3) {
@@ -130,10 +134,22 @@ button.is-checked {
   justify-content: center;
 }
 .educator,
-.paprika {
+.producer {
   border: 3px solid $accentDark;
   box-shadow: 5px 5px 5px $accentDark;
 }
+
+.educator h4,
+.producer h4 {
+  font-size: 1.5rem;
+  margin: 30px 0;
+}
+
+.educator figure,
+.producer figure {
+  margin-bottom: 30px;
+}
+
 .sheSpreads {
   width: 100%;
 }
@@ -212,27 +228,46 @@ button.is-checked {
 
 .stalk 	h3 {
   font-size: 1.5rem;
-  color: $accentdark;
+  color: $accentDark;
   margin: 0;
 }
 
 
 
+
 .insta {
-		padding: 5px 45px;
-		border-radius: 10%;
+		padding: 4px 14px;
+border-radius: 5px;
 		background: radial-gradient(circle at 33% 100%, #FED373 4%, #F15245 30%, #D92E7F 62%, #9B36B7 85%, #515ECF);
-		display: inline;
-		border-bottom: none;
+    display: flex;
+    align-items: center;
+    border-bottom: none;
+    color: white;
   }
   
   .insta a {
     border-bottom: none;
-    color: $white;
     font-family: $pagetext;
+    color: white;
+    font-size: 1rem;
   }
 
-
+  
+  
+  .stalk .social:hover a {
+    color: white;
+  }
+  
+  .stalk .social:hover a {
+    transform: scale(1);
+  }
+  
+   .stalk .social a:hover {
+    transform: scale(1.1);
+  }
+  
+  
+  
 
 
 

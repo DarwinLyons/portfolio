@@ -1852,7 +1852,7 @@ figcaption a,
 }
 
 .headerMain {
-  padding-top: 3%;
+  padding-top: 7%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1890,6 +1890,14 @@ figcaption {
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
   z-index: 1;
+}
+
+.headerMain figcaption,
+.middleText figcaption {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 figure:hover figcaption {
@@ -1988,7 +1996,7 @@ button.is-checked {
 
 .gridItem {
   width: calc(33% - 10px);
-  margin: 5px;
+  margin: 15px 5px;
 }
 
 .gridItem:nth-of-type(3) {
@@ -2014,10 +2022,21 @@ button.is-checked {
 }
 
 .educator,
-.paprika {
+.producer {
   border: 3px solid #1995AD;
   -webkit-box-shadow: 5px 5px 5px #1995AD;
           box-shadow: 5px 5px 5px #1995AD;
+}
+
+.educator h4,
+.producer h4 {
+  font-size: 1.5rem;
+  margin: 30px 0;
+}
+
+.educator figure,
+.producer figure {
+  margin-bottom: 30px;
 }
 
 .sheSpreads {
@@ -2105,4 +2124,52 @@ button.is-checked {
 .actorForm input[type=text],
 .actorForm input[type=email] {
   width: 45%;
+}
+
+.stalk {
+  text-align: center;
+  margin: 0 20px 20px;
+  line-height: 2;
+  padding-bottom: 20px;
+}
+
+.stalk h3 {
+  font-size: 1.5rem;
+  color: #1995AD;
+  margin: 0;
+}
+
+.insta {
+  padding: 4px 14px;
+  border-radius: 5px;
+  background: radial-gradient(circle at 33% 100%, #FED373 4%, #F15245 30%, #D92E7F 62%, #9B36B7 85%, #515ECF);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: none;
+  color: white;
+}
+
+.insta a {
+  border-bottom: none;
+  font-family: "Crimson Text", serif;
+  color: white;
+  font-size: 1rem;
+}
+
+.stalk .social:hover a {
+  color: white;
+}
+
+.stalk .social:hover a {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.stalk .social a:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
