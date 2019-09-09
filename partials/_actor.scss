@@ -82,18 +82,34 @@ figure:hover figcaption {
 
 //Past Projects
 
+.past h2 {
+  position: relative;
+  font-size: 2.5rem;
+}
+.past h2::after {
+  content: '';
+  position: absolute;
+  top: 55%;
+  left: 7%;
+  height: 20%;
+  width: 100%;
+  background: $accentDark;
+  z-index: -1;
+}
+
+
 .past {
   text-align: center;
 }
 
-.pastIntro {
+.pastContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 50px 0;
 }
 
-.pastIntro h2 {
+.pastContainer h2 {
   padding: 30px 0;
 }
 
@@ -113,20 +129,18 @@ figure:hover figcaption {
 .gridItem {
   width: calc(33% - 60px);
   margin: 30px;
-
 }
 
-// .gridItem:nth-of-type(3) {
-//   margin: 5px 0 5px 5px;
-// }
+.double {
+  width: 50%;
+}
 
 //reviews
 
 .review {
-  // width: calc(33% - 10px);
   border: 3px solid $accentDark;
   box-shadow: 5px 5px 5px $accentDark;
-  // padding: 15px 15px 0 15px;
+  padding: 30px 30px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -135,6 +149,7 @@ figure:hover figcaption {
 .producer {
   border: 3px solid $accentDark;
   box-shadow: 5px 5px 5px $accentDark;
+  padding: 30px 30px;
 }
 
 .educator h4,
@@ -146,10 +161,6 @@ figure:hover figcaption {
 .educator figure,
 .producer figure {
   margin-bottom: 30px;
-}
-
-.sheSpreads {
-  width: 100%;
 }
 
 .banner figcaption {

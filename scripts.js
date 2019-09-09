@@ -1,15 +1,3 @@
-//submit a tags when enter
-const accessibleNav = function () {
-  console.log("access!")
-  function navigateLink(evt) {
-    if (evt.type == "click" ||
-      evt.keyCode == sap.ui.keycodes.ENTER) {
-      const ref = evt.target != null ? evt.target : evt.srcElement;
-      if (ref) window.open(ref.getAttribute("href"), "_blank");
-    }
-  }
-
-}
 
 // Add smooth scrolling to all links
 const smoothScroll = function () {
@@ -24,7 +12,7 @@ const smoothScroll = function () {
       const hash = this.hash;
   
       // Using jQuery's animate() method to add smooth page scroll
-      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      
       $('html, body').animate({
         scrollTop: $(hash).offset().top
       }, 800, function () {
@@ -58,7 +46,7 @@ const lineAnimation = function() {
 
 
 const navSlide = function() {
-  //sticky nav
+  //sticky nav for menu
   $(window).bind('scroll', function () {
     
     //if window height is larger than the height minus the menu
@@ -86,9 +74,9 @@ const $grid = $($container).isotope({
 });
 
 // layout Isotope again after all images have loaded
-$grid.imagesLoaded(function () {
-  $grid.isotope('layout');
-});
+// $grid.imagesLoaded(function () {
+//   $grid.isotope('layout');
+// });
 
 // filter items on button click
 $('.filter-button-group button').on('click', function () {
@@ -125,9 +113,5 @@ const init = function() {
 
 //document ready
 $(document).ready(function(){
-
   init();
-
-    
-
 })

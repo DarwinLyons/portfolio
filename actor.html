@@ -104,7 +104,7 @@
               <h2 tabindex="4">About</h2>
         
             </div>
-            <p>Hi! My name is Darwin Lyons. I’m an <a href="#actor">actor</a>, <a href="#director">director</a>, <a href="#creator">creator</a>, <a href="#educator">educator</a> and <a href="#producer">producer</a> in theatre and film. I make art in the hopes that audiences will be transported to a different world, and then be left with questions about what it means to be human. My favourite things are funny things, kind things, andinteresting things.
+            <p>Hi! My name is Darwin Lyons. I’m an <a href="#actor">actor</a>, <a href="#director">director</a>, <a href="#creator">creator</a>, <a href="#educator">educator</a> and <a href="#producer">producer</a> in theatre and film. I make art in the hopes that audiences will be transported to a different world, and then be left with questions about what it means to be human. My favourite things are funny things, kind things, and interesting things.
             </p>
           </div>
           <div class="download">
@@ -123,7 +123,7 @@
       </div>
   
       <div class="past wrapperSmall" id="past">
-        <div class="pastIntro">
+        <div class="pastContainer">
           <h2 tabindex="5">Past Projects</h2>
           <div class="button-group filter-button-group">
             <button class="button checked all" data-filter="*">Show All</button>
@@ -131,16 +131,11 @@
             <button class="button filter" data-filter=".director">Director</button>
             <button class="button filter" data-filter=".creator">Creator</button>
             <button class="button filter" data-filter=".educator">Educator</button>
-            <button class="button" data-filter="producer filter">Producer</button>
+            <button class="button filter" data-filter=".producer">Producer</button>
           </div>
 
         </div>
         <div class="grid">
-          <div class="actorTitle">
-            <h2 id="actor">Actor</h2>
-
-          </div>
-
           <div class="gridItem actor review">
             <p>"Darwin Lyons’ butcher resonates with authenticity ... Her nuanced performance has the audience leaning in, wanting
               more." </p>
@@ -149,14 +144,13 @@
                 of Dead Roads </a>
             </p>
           </div>
-          <div class="gridItem actor review">
-            <p>"But the real standouts—thankfully—are Paolo Santalucia as Romeo and Darwin Lyons as Juliet. Lyons seems to be
-              playing Juliet as if she were 14, full of pop-song sentimentality and unable to cope with the realities—and dangers—of
-              love in the real world. "</p>
-            <p>
-              <a href="https://www.mooneyontheatre.com/2012/11/08/review-romeo-and-juliet-hart-house/" target="_blank">-Mike Anderson, Mooney on
-                Theatre Review of Romeo and Juliet</a>
-            </p>
+          <div class="gridItem actor creator">
+            <figure>
+              <img src="assets/DR_opt.jpg" alt="a picture of Darwin Lyons playing a butcher">
+              <figcaption>
+                <p>Darwin playing The Butcher in Dead Roads, photocred Jessica Rose</p>
+              </figcaption> <!-- figcaption -->
+            </figure> <!-- figure -->
           </div>
           <div class="gridItem actor review">
             <p>"Darwin Lyons as the butcher was brash and biting. Her delivery was excellent and seemed to make the audience smile
@@ -181,14 +175,6 @@
               </figcaption> <!-- figcaption -->
             </figure> <!-- figure -->
           </div>
-          <div class="gridItem actor creator">
-            <figure>
-              <img src="assets/DR_opt.jpg" alt="a picture of Darwin Lyons playing a butcher">
-              <figcaption>
-                <p>Darwin playing The Butcher in Dead Roads, photocred Jessica Rose</p>
-              </figcaption> <!-- figcaption -->
-            </figure> <!-- figure -->
-          </div>
           <div class="gridItem actor">
             <figure>
               <img src="assets/juliet_opt.jpg" alt="a picture of Darwin Lyons playing a Juliet">
@@ -196,6 +182,17 @@
                 <p>Darwin playing Juliet in Romeo and Juliet at Hart House, photocred Daniel DiMarco</p>
               </figcaption> <!-- figcaption -->
             </figure> <!-- figure -->
+          </div>
+          <div class="gridItem actor review">
+            <p>"But the real standouts—thankfully—are Paolo Santalucia as Romeo and Darwin Lyons as Juliet. Lyons seems to be
+              playing Juliet as if she were 14, full of pop-song sentimentality and unable to cope with the realities—and
+              dangers—of
+              love in the real world. "</p>
+            <p>
+              <a href="https://www.mooneyontheatre.com/2012/11/08/review-romeo-and-juliet-hart-house/" target="_blank">-Mike
+                Anderson, Mooney on
+                Theatre Review of Romeo and Juliet</a>
+            </p>
           </div>
           <div class="gridItem actor">
             <figure>
@@ -237,32 +234,6 @@
               </figcaption> <!-- figcaption -->
             </figure> <!-- figure -->
           </div>
-          <div class="directorTitle" id="director">
-            <h2>Director</h2>
-          </div>
-          <div class="gridItem director review">
-            <p>“ Written by Caitie Graham, Paradise Comics shows us what it’s actually like to pursue heroism as humans, and all the
-            pain and struggling that come with it…the cast creates a healthy balance between intense and comedic moments.”</p>
-            <p>
-              <a href="http://www.thetheatrereader.com/reviews/2016/11/28/paradise-comics-shows-us-what-its-actually-like-to-pursue-heroism" target="_blank">-Milica Markovic, The Theatre Reader, Review of Paradise Comics</a>
-            </p>
-          </div>
-          <div class="gridItem director review">
-            <p>“Director Darwin Lyons makes every relationship valid & alive.”</p>
-            <p>
-              <a
-                href="https://barczablog.com/2016/11/30/filament-incubator-paradise-comics/" target="_blank">-Leslie Barcza, Barcza Blog, Review of Paradise Comics
-              </a>
-            </p>
-          </div>
-          <div class="gridItem director review">
-            <p>“The cast works well together…Director Darwin Lyons has made good use of [the] narrow space…Desperately Seeking
-            Something was a very satisfying show. Good script, appealing characters, a strong cast, tight direction. Definitely
-            worth seeing.”</p>
-            <p>
-              <a href="https://www.mooneyontheatre.com/?s=desperately+seeking+something" target="_blank">- Sam Mooney, Mooney on Theatre, Review of Desperately Seeking Something</a>
-            </p>
-          </div>
           <div class="gridItem director">
             <figure>
               <img src="assets/WellBorn8_opt.jpg" alt="a picture of the play Well Born">
@@ -289,6 +260,21 @@
           </div>
           <div class="gridItem director">
             <figure>
+              <img src="assets/ParadiseComics4_opt.jpg" alt="a picture of the play Paradise Comics">
+              <figcaption>
+                <p>Paradise Comics, Directed Darwin Lyons, Photocred Zach Parkhurst</p>
+              </figcaption> <!-- figcaption -->
+            </figure> <!-- figure -->
+          </div>
+          <div class="gridItem director review">
+            <p>“ Written by Caitie Graham, Paradise Comics shows us what it’s actually like to pursue heroism as humans, and all the
+            pain and struggling that come with it…the cast creates a healthy balance between intense and comedic moments.”</p>
+            <p>
+              <a href="http://www.thetheatrereader.com/reviews/2016/11/28/paradise-comics-shows-us-what-its-actually-like-to-pursue-heroism" target="_blank">-Milica Markovic, The Theatre Reader, Review of Paradise Comics</a>
+            </p>
+          </div>
+          <div class="gridItem director">
+            <figure>
               <img src="assets/paradiseComics2_opt.jpg" alt="a picture of the play Paradise Compics">
               <figcaption>
                 <p>Paradise Comics, Directed Darwin Lyons, Photocred Zach Parkhurst</p>
@@ -303,13 +289,21 @@
               </figcaption> <!-- figcaption -->
             </figure> <!-- figure -->
           </div>
-          <div class="gridItem director">
-            <figure>
-              <img src="assets/ParadiseComics4_opt.jpg" alt="a picture of the play Paradise Comics">
-              <figcaption>
-                <p>Paradise Comics, Directed Darwin Lyons, Photocred Zach Parkhurst</p>
-              </figcaption> <!-- figcaption -->
-            </figure> <!-- figure -->
+          <div class="gridItem director review">
+            <p>“Director Darwin Lyons makes every relationship valid & alive.”</p>
+            <p>
+              <a
+                href="https://barczablog.com/2016/11/30/filament-incubator-paradise-comics/" target="_blank">-Leslie Barcza, Barcza Blog, Review of Paradise Comics
+              </a>
+            </p>
+          </div>
+          <div class="gridItem director review">
+            <p>“The cast works well together…Director Darwin Lyons has made good use of [the] narrow space…Desperately Seeking
+            Something was a very satisfying show. Good script, appealing characters, a strong cast, tight direction. Definitely
+            worth seeing.”</p>
+            <p>
+              <a href="https://www.mooneyontheatre.com/?s=desperately+seeking+something" target="_blank">- Sam Mooney, Mooney on Theatre, Review of Desperately Seeking Something</a>
+            </p>
           </div>
           <div class="gridItem director">
             <figure>
@@ -327,10 +321,7 @@
               </figcaption> <!-- figcaption -->
             </figure> <!-- figure -->
           </div>
-          <div class="creatorTitle" id="creator">
-                      <h2>Creator</h2>
-          </div>
-          <div class="creator gridItem sheSpreads producer">
+          <div class="creator gridItem sheSpreads producer double">
             <figure class="banner">
               <img src="assets/bannercrop-min.jpeg" alt="an image of three women screaming">
               <figcaption>
@@ -350,10 +341,6 @@
               </div> <!-- review -->
             </div> <!-- writerText -->
           </div> <!-- creator -->
-          <div class="educatorTitle" id="educator">
-              <h2>Educator</h2>
-          </div>
-  
           <div class="gridItem educator">
             <h4>Shakespeare In The Ruff, Younth Coordinator</h4>
             <figure>
@@ -400,9 +387,6 @@
               </p>
             </div> <!-- text -->
           </div><!-- gridItem -->
-          <div class="creatorTitle">
-            <h2 id="producer">Producer</h2>
-          </div>
           <div class="producer gridItem">
             <h4>The Paprika Festival, Artistic Producer</h4>
             <div class="imageProducer">
@@ -489,9 +473,9 @@
  
 <script src='https://code.jquery.com/jquery-3.2.1.min.js'
   integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=' crossorigin='anonymous'></script>
-  //images loaded
+  <!-- images loaded -->
   <script src="imagesloaded.pkgd.min.js"></script>
-  //isotope
+  <!-- isotope -->
   <script src="isotope.pkgd.min.js"></script>
 <script src="scripts.js">scripts.js</script>
 
