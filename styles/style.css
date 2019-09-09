@@ -942,9 +942,9 @@ header h3 {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .skillUL li {
@@ -1970,12 +1970,8 @@ figure:hover figcaption {
   padding: 30px 0;
 }
 
-.button:active,
-.button.is-checked {
+.checked {
   background: #1995AD;
-}
-
-button.is-checked {
   text-shadow: 0 -1px #474946;
 }
 
@@ -1995,20 +1991,14 @@ button.is-checked {
 }
 
 .gridItem {
-  width: calc(33% - 10px);
-  margin: 15px 5px;
-}
-
-.gridItem:nth-of-type(3) {
-  margin: 5px 0 5px 5px;
+  width: calc(33% - 60px);
+  margin: 30px;
 }
 
 .review {
-  width: calc(33% - 10px);
   border: 3px solid #1995AD;
   -webkit-box-shadow: 5px 5px 5px #1995AD;
           box-shadow: 5px 5px 5px #1995AD;
-  padding: 15px 15px 0 15px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2068,7 +2058,7 @@ button.is-checked {
   padding-bottom: 50px;
 }
 
-.connect a {
+.actorConnect a {
   border-bottom: 3px solid #1995AD;
 }
 

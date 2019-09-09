@@ -76,6 +76,33 @@ const navSlide = function() {
   })
 }
 
+//grab the past projects grid
+const $container = $('.grid');
+
+const $grid = $($container).isotope({
+  // options
+  itemSelector: '.gridItem',
+  layoutMode: 'masonry',
+});
+
+// layout Isotope again after all images have loaded
+$grid.imagesLoaded(function () {
+  $grid.isotope('layout');
+});
+
+// filter items on button click
+$('.filter-button-group button').on('click', function () {
+  if( $(this).hasClass('checked') && $(this).hasClass('filter')) {
+    $(this).removeClass('checked');
+    $container.isotope({ filter: '*'})
+    $('.all').addClass('checked');
+  } else {
+    $('.filter-button-group button').removeClass('checked');
+    const filterValue = $(this).attr('data-filter');
+    $grid.isotope({ filter: filterValue });
+    $(this).addClass('checked')
+  }
+});
 
 //header slide
 const headerSlide = function() {
@@ -86,45 +113,7 @@ const headerSlide = function() {
     });
 }
 
-//actor gallery shuffle
-// filter .actor items
-// $grid.isotope({ filter: '.actor' });
 
-// // filter .director items
-// $grid.isotope({ filter: '.director' });
-
-// // filter .creator items
-// $grid.isotope({ filter: '.creator' });
-
-// // filter .educator items
-// $grid.isotope({ filter: '.educator' });
-
-// // filter .producer items
-// $grid.isotope({ filter: '.producer' });
-
-// // show all items
-// $grid.isotope({ filter: '*' });
-
-// // hash of functions that match data-filter values
-// const filterFns = {
-//   // show if actor
-//   actor: function () {
-//     const name = $(this).find('.name').text();
-//     return name.match(/actor$/);
-//   },
-//   director: function () {
-//     const name = $(this).find('.name').text();
-//     return name.match(/director$/);
-//   },
-// };
-
-// // filter items on button click
-// $('.filter-button-group').on('click', 'button', function () {
-//   var filterValue = $(this).attr('data-filter');
-//   // use filter function if value matches
-//   filterValue = filterFns[filterValue] || filterValue;
-//   $grid.isotope({ filter: filterValue });
-// });
 
 const init = function() {
   navSlide();

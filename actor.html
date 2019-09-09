@@ -125,13 +125,13 @@
       <div class="past wrapperSmall" id="past">
         <div class="pastIntro">
           <h2 tabindex="5">Past Projects</h2>
-          <div class="button-group filters-button-group">
-            <button class="button is-checked" data-filter="*">Show All</button>
-            <button class="button" data-filter=".actor">Actor</button>
-            <button class="button" data-filter=".director">Director</button>
-            <button class="button" data-filter=".creator">Creator</button>
-            <button class="button" data-filter=".educator">Educator</button>
-            <button class="button" data-filter="producer">Producer</button>
+          <div class="button-group filter-button-group">
+            <button class="button checked all" data-filter="*">Show All</button>
+            <button class="button filter" data-filter=".actor">Actor</button>
+            <button class="button filter" data-filter=".director">Director</button>
+            <button class="button filter" data-filter=".creator">Creator</button>
+            <button class="button filter" data-filter=".educator">Educator</button>
+            <button class="button" data-filter="producer filter">Producer</button>
           </div>
 
         </div>
@@ -140,6 +140,7 @@
             <h2 id="actor">Actor</h2>
 
           </div>
+
           <div class="gridItem actor review">
             <p>"Darwin Lyons’ butcher resonates with authenticity ... Her nuanced performance has the audience leaning in, wanting
               more." </p>
@@ -428,7 +429,7 @@
 
       <!-- past -->
       </div>
-      <div class="connect wrapperSmall" id="actorContact">
+      <div class="connect actorConnect wrapperSmall" id="actorContact">
         <h2>Connect With Me!</h2>
       
         <div class="middleText">
@@ -488,6 +489,11 @@
  
 <script src='https://code.jquery.com/jquery-3.2.1.min.js'
   integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=' crossorigin='anonymous'></script>
+  //images loaded
+  <script src="imagesloaded.pkgd.min.js"></script>
+  //isotope
+  <script src="isotope.pkgd.min.js"></script>
 <script src="scripts.js">scripts.js</script>
+
 </body>
 </html>
