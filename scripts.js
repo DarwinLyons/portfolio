@@ -67,6 +67,7 @@ const navSlide = function() {
 //grab the past projects grid
 const $container = $('.grid');
 
+//make a variable of the settings to call later
 const $grid = $($container).isotope({
   // options
   itemSelector: '.gridItem',
@@ -74,9 +75,9 @@ const $grid = $($container).isotope({
 });
 
 // layout Isotope again after all images have loaded
-// $grid.imagesLoaded(function () {
-//   $grid.isotope('layout');
-// });
+$grid.imagesLoaded().progress(function () {
+  $grid.isotope('layout');
+});
 
 // filter items on button click
 $('.filter-button-group button').on('click', function () {

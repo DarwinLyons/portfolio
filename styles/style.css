@@ -199,15 +199,13 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 }
 
 @media (max-width: 550px) {
-  .actor,
-  .actor a {
+  .actor {
     font-size: 2rem;
   }
 }
 
 @media (max-width: 305px) {
-  .actor,
-  .actor a {
+  .actor {
     font-size: 1.5rem;
   }
 }
@@ -509,7 +507,7 @@ header .container {
 .header {
   left: -110%;
   position: absolute;
-  top: 25%;
+  top: 35%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -555,7 +553,7 @@ header h3 {
     -webkit-box-align: left;
         -ms-flex-align: left;
             align-items: left;
-    width: 47%;
+    width: 52%;
   }
   .subTitle li {
     margin: 15px 0 0 0;
@@ -1884,6 +1882,23 @@ figcaption {
   z-index: 1;
 }
 
+.gridItem {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.gridItem figcaption p {
+  padding: 0 20px;
+}
+
 .headerMain figcaption,
 .middleText figcaption {
   -webkit-box-orient: vertical;
@@ -1943,6 +1958,7 @@ figure:hover figcaption {
 .past h2 {
   position: relative;
   font-size: 2.5rem;
+  padding: 30px 0;
 }
 
 .past h2::after {
@@ -1954,6 +1970,10 @@ figure:hover figcaption {
   width: 100%;
   background: #1995AD;
   z-index: -1;
+}
+
+.button-group button {
+  width: 135px;
 }
 
 .past {
@@ -1972,10 +1992,6 @@ figure:hover figcaption {
       -ms-flex-align: center;
           align-items: center;
   padding: 50px 0;
-}
-
-.pastContainer h2 {
-  padding: 30px 0;
 }
 
 .checked {
@@ -1998,8 +2014,13 @@ figure:hover figcaption {
       flex-wrap: wrap;
 }
 
+.grid figure {
+  -webkit-box-shadow: 5px 5px 5px #1995AD;
+          box-shadow: 5px 5px 5px #1995AD;
+}
+
 .gridItem {
-  width: calc(33% - 60px);
+  width: calc(50% - 60px);
   margin: 30px;
 }
 
@@ -2080,9 +2101,8 @@ figure:hover figcaption {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -2172,4 +2192,125 @@ figure:hover figcaption {
 .stalk .social a:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
+}
+
+@media (max-width: 1080px) {
+  .actorForm textarea {
+    width: 90%;
+  }
+  .actorAbout .aboutText {
+    padding-right: 50px;
+  }
+}
+
+@media (max-width: 890px) {
+  .button-group button {
+    margin: 15px;
+  }
+}
+
+@media (max-width: 755px) {
+  .gridItem {
+    width: 90%;
+    padding: 0;
+  }
+  .educator,
+  .producer,
+  .review {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 735px) {
+  .headerMain {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .headerText,
+  .download {
+    margin: 50px 0;
+  }
+  .actorHeader {
+    height: auto;
+  }
+  .actorAbout {
+    height: auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 50px 0;
+  }
+  .actorAbout .aboutText {
+    padding-right: 0;
+  }
+  .actorForm,
+  .actorForm input[type="text"],
+  .actorForm input[type="email"] {
+    width: 90%;
+  }
+  .middleText {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .middleText figure {
+    margin-bottom: 50px;
+  }
+  .love {
+    width: 100%;
+  }
+}
+
+@media (max-width: 650px) {
+  .actorHeader .menuContainer {
+    background: #F1F1F2;
+  }
+  .headerImg {
+    margin-top: 75px;
+  }
+  .actorAbout .aboutText {
+    width: 80%;
+  }
+}
+
+@media (max-width: 500px) {
+  .headerImg {
+    margin-top: 100px;
+  }
+  .download {
+    margin: 50px 10px;
+  }
+  .past h2 {
+    font-size: 2rem;
+  }
+  .gridItem figcaption p {
+    font-size: 1rem;
+  }
+  .connect h2 {
+    font-size: 2.4rem;
+    text-align: center;
+  }
+  .love {
+    padding: 35px;
+  }
+}
+
+@media (max-width: 380px) {
+  .button-group button {
+    font-size: 0.9rem;
+    margin: 15px 7px;
+  }
 }

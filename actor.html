@@ -59,15 +59,6 @@
                   <div class="click mobileContainer">
                     <li><a href="#actorAbout" id="actorAboutNav">About</a></li>
                     <li><a href="#past" id="portfolioNav">Past Work</a></li>
-                      <div class="subMenu">
-                        <ul>
-                          <li><a href="#actor">Actor</a></li>
-                          <li><a href="#director">Director</a></li>
-                          <li><a href="#creator">Creator</a></li>
-                          <li><a href="#educator">Educator</a></li>
-                          <li><a href="#producer">Producer</a></li>
-                        </ul>
-                      </div>
                     <li><a href="#actorContact" id="actorContactNav">Contact</a></li>
                   </div>
                 </ul>
@@ -127,11 +118,11 @@
           <h2 tabindex="5">Past Projects</h2>
           <div class="button-group filter-button-group">
             <button class="button checked all" data-filter="*">Show All</button>
-            <button class="button filter" data-filter=".actor">Actor</button>
-            <button class="button filter" data-filter=".director">Director</button>
-            <button class="button filter" data-filter=".creator">Creator</button>
-            <button class="button filter" data-filter=".educator">Educator</button>
-            <button class="button filter" data-filter=".producer">Producer</button>
+            <button id="actor" class="button filter" data-filter=".actor">Actor</button>
+            <button id="director" class="button filter" data-filter=".director">Director</button>
+            <button id="creator" class="button filter" data-filter=".creator">Creator</button>
+            <button id="educator" class="button filter" data-filter=".educator">Educator</button>
+            <button id="producer" class="button filter" data-filter=".producer">Producer</button>
           </div>
 
         </div>
@@ -321,7 +312,7 @@
               </figcaption> <!-- figcaption -->
             </figure> <!-- figure -->
           </div>
-          <div class="creator gridItem sheSpreads producer double">
+          <div class="creator gridItem sheSpreads producer">
             <figure class="banner">
               <img src="assets/bannercrop-min.jpeg" alt="an image of three women screaming">
               <figcaption>
@@ -470,13 +461,14 @@
     </div>
   </footer>
 
- 
+<!-- jquery -->
 <script src='https://code.jquery.com/jquery-3.2.1.min.js'
   integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=' crossorigin='anonymous'></script>
-  <!-- images loaded -->
-  <script src="imagesloaded.pkgd.min.js"></script>
-  <!-- isotope -->
-  <script src="isotope.pkgd.min.js"></script>
+<!-- images loaded -->
+<script src="imagesloaded.pkgd.min.js"></script>
+<!-- isotope -->
+<script src="isotope.pkgd.min.js"></script>
+<!-- scripts -->
 <script src="scripts.js">scripts.js</script>
 
 </body>

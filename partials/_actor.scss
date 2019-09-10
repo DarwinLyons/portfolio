@@ -39,6 +39,21 @@ figcaption {
   transition: opacity 0.3s;
   z-index: 1;
 }
+
+.gridItem {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+// .gridItem figcaption {
+//   width: 100%;
+// }
+
+.gridItem figcaption p {
+  padding: 0 20px;
+}
+
 .headerMain figcaption,
 .middleText figcaption {
   flex-direction: column;
@@ -85,6 +100,7 @@ figure:hover figcaption {
 .past h2 {
   position: relative;
   font-size: 2.5rem;
+  padding: 30px 0;
 }
 .past h2::after {
   content: '';
@@ -95,6 +111,10 @@ figure:hover figcaption {
   width: 100%;
   background: $accentDark;
   z-index: -1;
+}
+
+.button-group button {
+  width: 135px;
 }
 
 
@@ -109,9 +129,6 @@ figure:hover figcaption {
   padding: 50px 0;
 }
 
-.pastContainer h2 {
-  padding: 30px 0;
-}
 
 
 .checked {
@@ -126,8 +143,12 @@ figure:hover figcaption {
   flex-wrap: wrap;
 }
 
+.grid figure {
+  box-shadow: 5px 5px 5px $accentDark;
+}
+
 .gridItem {
-  width: calc(33% - 60px);
+  width: calc(50% - 60px);
   margin: 30px;
 }
 
@@ -188,7 +209,7 @@ figure:hover figcaption {
 .middleText {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
 }
 
@@ -274,8 +295,142 @@ border-radius: 5px;
    .stalk .social a:hover {
     transform: scale(1.1);
   }
-  
-  
+
+  // media queries
+  @media (max-width: 1080px) {
+    // .gridItem.review {
+    //   width: 100%;
+    // }
+    .actorForm textarea {
+      width: 90%;
+    }
+
+    .actorAbout .aboutText {
+      padding-right: 50px;
+    }
+
+  }
+
+  @media (max-width: 890px) {
+    // .educator {
+    //   width: 100%;
+    // }
+
+    .button-group button {
+      margin: 15px;
+    }
+  }
+
+  @media (max-width: 755px) {
+    .gridItem {
+      width: 90%;
+      padding: 0;
+    }
+
+    .educator,
+    .producer, 
+    .review {
+      padding: 15px;
+    }
+  }
+
+  @media (max-width: 735px ) {
+    .headerMain {
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .headerText,
+    .download {
+      margin: 50px 0;
+    }
+
+    .actorHeader {
+      height: auto;
+    }
+
+    .actorAbout {
+      height: auto;
+      flex-direction: column-reverse;
+      justify-content: center;
+      align-items: center;
+      margin: 50px 0;
+    }
+
+    .actorAbout .aboutText {
+      padding-right: 0;
+    }
+
+    .actorForm,
+    .actorForm input[type="text"], 
+    .actorForm input[type="email"] {
+      width: 90%;
+    }
+
+
+
+    .middleText {
+      flex-direction: column;
+    }
+
+    .middleText figure {
+      margin-bottom: 50px;
+    }
+
+    .love {
+      width: 100%;
+    }
+  }
+
+@media (max-width: 650px) {
+  .actorHeader .menuContainer {
+    background: $background;
+  }
+
+  .headerImg {
+    margin-top: 75px;
+  }
+
+  .actorAbout .aboutText {
+    width: 80%;
+  }
+}
+
+@media (max-width: 500px) {
+  .headerImg {
+    margin-top: 100px;
+  }
+
+  .download {
+    margin: 50px 10px;
+  }
+
+  .past h2 {
+    font-size: 2rem;
+  }
+
+  .gridItem figcaption p {
+    font-size: 1rem;
+  }
+
+  .connect h2 {
+    font-size: 2.4rem;
+    text-align: center;
+  }
+
+  .love {
+    padding: 35px;
+  }
+}
+
+@media (max-width: 380px) {
+
+  .button-group button {
+    font-size: 0.9rem;
+    margin: 15px 7px;
+  }
+
+}
   
 
 
